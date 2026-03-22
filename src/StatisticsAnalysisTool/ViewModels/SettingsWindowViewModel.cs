@@ -62,6 +62,7 @@ public class SettingsWindowViewModel : BaseViewModel
     private string _proxyUrlWithPort;
     private string _debugConsoleFilter;
     private bool _isOpenDebugConsoleWhenStartingTheToolChecked;
+    private string _updateXmlUrl;
 
     public SettingsWindowViewModel()
     {
@@ -112,6 +113,7 @@ public class SettingsWindowViewModel : BaseViewModel
 
         // Auto update
         IsSuggestPreReleaseUpdatesActive = SettingsController.CurrentSettings.IsSuggestPreReleaseUpdatesActive;
+        UpdateXmlUrl = SettingsController.CurrentSettings.UpdateXmlUrl;
 
         // Item window
         IsOpenItemWindowInNewWindowChecked = SettingsController.CurrentSettings.IsOpenItemWindowInNewWindowChecked;
@@ -159,6 +161,7 @@ public class SettingsWindowViewModel : BaseViewModel
         SettingsController.CurrentSettings.AlbionDataProjectBaseUrlEast = AlbionDataProjectBaseUrlEast;
 
         SettingsController.CurrentSettings.IsSuggestPreReleaseUpdatesActive = IsSuggestPreReleaseUpdatesActive;
+        SettingsController.CurrentSettings.UpdateXmlUrl = UpdateXmlUrl;
         SettingsController.CurrentSettings.ExactMatchPlayerNamesLineNumber = PlayerSelectionWithSameNameInDb;
 
         SetBackupStorageDirPathIfExist(BackupStorageDirectoryPath);
@@ -756,6 +759,16 @@ public class SettingsWindowViewModel : BaseViewModel
         set
         {
             _proxyUrlWithPort = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public string UpdateXmlUrl
+    {
+        get => _updateXmlUrl;
+        set
+        {
+            _updateXmlUrl = value;
             OnPropertyChanged();
         }
     }

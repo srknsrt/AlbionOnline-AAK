@@ -43,9 +43,16 @@
                     <DockPanel Margin="0,5,0,0">
                         <Label Content="{Binding Translation.SuggestPreReleaseUpdates, FallbackValue=SUGGEST__PRE__RELEASE__UPDATES}" MinWidth="300" VerticalAlignment="Top" />
                         <CheckBox IsChecked="{Binding IsSuggestPreReleaseUpdatesActive}" Height="21" VerticalAlignment="Top" VerticalContentAlignment="Top">
-                            <Label Content="{Binding Translation.AttentionTheseVersionsAreStillBeingTested, FallbackValue=ATTENTION__THESE__VERSION__ARE__STILL__BEING__TESTED}" 
+                            <Label Content="{Binding Translation.AttentionTheseVersionsAreStillBeingTested, FallbackValue=ATTENTION__THESE__VERSION__ARE__STILL__BEING__TESTED}"
                                    MinWidth="300" VerticalAlignment="Top" Foreground="{StaticResource SolidColorBrush.Accent.Red.3}" ContentStringFormat="{}({0})" />
                         </CheckBox>
+                    </DockPanel>
+                    <DockPanel Margin="0,5,0,0">
+                        <Label Content="Güncelleme XML URL:" MinWidth="300" VerticalAlignment="Top"
+                               ToolTip="Güncelleme kontrol dosyasının URL'si. Boş bırakırsanız varsayılan GitHub adresi kullanılır." />
+                        <TextBox Text="{Binding UpdateXmlUrl, UpdateSourceTrigger=LostFocus}"
+                                 Height="26" MinWidth="400" MaxWidth="600" TextWrapping="NoWrap" VerticalAlignment="Top"
+                                 ToolTip="Örnek: https://raw.githubusercontent.com/srknsrt/AlbionOnline-AAK/main/src/StatisticsAnalysisTool/ao-update-check.xml" />
                     </DockPanel>
                     <DockPanel Margin="0,5,0,0">
                         <Label Content="{Binding Translation.NavigationTabVisibility, FallbackValue=NAVIGATION__TAB__VISIBILITY}" MinWidth="300" VerticalAlignment="Top" />

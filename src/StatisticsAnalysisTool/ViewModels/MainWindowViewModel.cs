@@ -120,6 +120,9 @@ public class MainWindowViewModel : BaseViewModel
     private Visibility _storageHistoryTabVisibility = Visibility.Visible;
     private Visibility _mapHistoryTabVisibility = Visibility.Visible;
     private Visibility _playerInformationTabVisibility = Visibility.Visible;
+    private static readonly Visibility _kelebekTrackerTabVisibility = File.Exists(
+        Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Trackers", "albion_tracker.py"))
+        ? Visibility.Visible : Visibility.Collapsed;
     private Visibility _guildTabVisibility = Visibility.Visible;
     private Visibility _toolTaskFrontViewVisibility = Visibility.Collapsed;
     private Visibility _statsDropDownVisibility = Visibility.Collapsed;
@@ -1325,6 +1328,8 @@ public class MainWindowViewModel : BaseViewModel
             OnPropertyChanged();
         }
     }
+
+    public Visibility KelebekTrackerTabVisibility => _kelebekTrackerTabVisibility;
 
     public double ToolTaskProgressBarValue
     {

@@ -1,6 +1,112 @@
 {
   "translations": [
     {
+      "tuid": "CRAFTING_CALCULATOR",
+      "tuv": [
+        {
+          "lang": "de-DE",
+          "seg": "Crafting-Rechner"
+        },
+        {
+          "lang": "en-US",
+          "seg": "Crafting Calculator"
+        },
+        {
+          "lang": "es-ES",
+          "seg": "Calculadora de Fabricación"
+        },
+        {
+          "lang": "fr-FR",
+          "seg": "Calculatrice de Fabrication"
+        },
+        {
+          "lang": "ja-JP",
+          "seg": "クラフト計算機"
+        },
+        {
+          "lang": "ko-KR",
+          "seg": "제작 계산기"
+        },
+        {
+          "lang": "pl-PL",
+          "seg": "Kalkulator Craftingu"
+        },
+        {
+          "lang": "pt-BR",
+          "seg": "Calculadora de Fabricação"
+        },
+        {
+          "lang": "ru-RU",
+          "seg": "Калькулятор крафта"
+        },
+        {
+          "lang": "tr-TR",
+          "seg": "Crafting Hesaplayıcı"
+        },
+        {
+          "lang": "zh-CN",
+          "seg": "制作计算器"
+        },
+        {
+          "lang": "zh-TW",
+          "seg": "製作計算器"
+        }
+      ]
+    },
+    {
+      "tuid": "CRAFTING_CALCULATOR_DESCRIPTION",
+      "tuv": [
+        {
+          "lang": "de-DE",
+          "seg": "Doppelklicken Sie auf ein Element, um den Crafting-Rechner zu öffnen."
+        },
+        {
+          "lang": "en-US",
+          "seg": "Double-click an item to open its crafting calculator."
+        },
+        {
+          "lang": "es-ES",
+          "seg": "Haz doble clic en un elemento para abrir su calculadora de fabricación."
+        },
+        {
+          "lang": "fr-FR",
+          "seg": "Double-cliquez sur un élément pour ouvrir sa calculatrice de fabrication."
+        },
+        {
+          "lang": "ja-JP",
+          "seg": "アイテムをダブルクリックしてクラフト計算機を開きます。"
+        },
+        {
+          "lang": "ko-KR",
+          "seg": "아이템을 두 번 클릭하면 제작 계산기가 열립니다."
+        },
+        {
+          "lang": "pl-PL",
+          "seg": "Kliknij dwukrotnie element, aby otworzyć kalkulator craftingu."
+        },
+        {
+          "lang": "pt-BR",
+          "seg": "Clique duas vezes em um item para abrir sua calculadora de fabricação."
+        },
+        {
+          "lang": "ru-RU",
+          "seg": "Дважды нажмите на элемент, чтобы открыть калькулятор крафта."
+        },
+        {
+          "lang": "tr-TR",
+          "seg": "Crafting hesaplayıcıyı açmak için bir eşyaya çift tıklayın."
+        },
+        {
+          "lang": "zh-CN",
+          "seg": "双击项目以打开制作计算器。"
+        },
+        {
+          "lang": "zh-TW",
+          "seg": "雙擊項目以打開製作計算器。"
+        }
+      ]
+    },
+    {
       "tuid": "LANGUAGE",
       "tuv": [
         {

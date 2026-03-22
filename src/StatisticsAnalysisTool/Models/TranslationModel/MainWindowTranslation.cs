@@ -105,7 +105,8 @@ public class MainWindowTranslation
     public static string To => LocalizationController.Translation("TO");
     public static string DeleteCurrentStorage => LocalizationController.Translation("DELETE_SELECTED_STORAGE");
     public static string Donations => LocalizationController.Translation("DONATIONS");
-    public static string Thanks => LocalizationController.Translation("THANKS");
+    public static string CraftingCalculator => LocalizationController.Translation("CRAFTING_CALCULATOR");
+    public static string CraftingCalculatorDescription => LocalizationController.Translation("CRAFTING_CALCULATOR_DESCRIPTION");
     public static string UnsupportedOs => LocalizationController.Translation("UNSUPPORTED_OS");
     public static string OpenToolDirectory => LocalizationController.Translation("OPEN_TOOL_DIRECTORY");
     public static string Or => LocalizationController.Translation("OR");

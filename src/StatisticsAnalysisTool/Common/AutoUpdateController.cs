@@ -17,7 +17,9 @@ public static class AutoUpdateController
 {
     public static async Task AutoUpdateAsync(bool reportErrors = false)
     {
-        var updateDirPath = Path.Combine(Environment.CurrentDirectory, Settings.Default.UpdatesDirectoryName);
+        var updateDirPath = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            "AlbionAAK", "Updates");
         var executablePath = Path.Combine(Environment.CurrentDirectory, "StatisticsAnalysisTool.exe");
         string currentUpdateUrl = string.Empty;
 
@@ -25,25 +27,27 @@ public static class AutoUpdateController
 
         try
         {
-            var isUrlAccessibleResult = await HttpClientUtils.IsUrlAccessible(Settings.Default.AutoUpdatePreReleaseConfigUrl);
+            // Kullanici tarafindan ayarlanmis URL'yi once dene, yoksa varsayilani kullan
+            var userDefinedUrl = SettingsController.CurrentSettings.UpdateXmlUrl;
+            var stableUrl = !string.IsNullOrWhiteSpace(userDefinedUrl)
+                ? userDefinedUrl
+                : Settings.Default.AutoUpdateConfigUrl;
+            var preReleaseUrl = Settings.Default.AutoUpdatePreReleaseConfigUrl;
 
-            if (SettingsController.CurrentSettings.IsSuggestPreReleaseUpdatesActive && isUrlAccessibleResult is { IsAccessible: true, IsProxyActive: true })
+            var checkUrl = SettingsController.CurrentSettings.IsSuggestPreReleaseUpdatesActive
+                ? preReleaseUrl
+                : stableUrl;
+
+            var isUrlAccessibleResult = await HttpClientUtils.IsUrlAccessible(checkUrl);
+
+            if (isUrlAccessibleResult is { IsAccessible: true, IsProxyActive: true })
             {
                 AutoUpdater.Proxy = new WebProxy(SettingsController.CurrentSettings.ProxyUrlWithPort);
-                currentUpdateUrl = Settings.Default.AutoUpdatePreReleaseConfigUrl;
-            }
-            else if (SettingsController.CurrentSettings.IsSuggestPreReleaseUpdatesActive && isUrlAccessibleResult is { IsAccessible: true, IsProxyActive: false })
-            {
-                currentUpdateUrl = Settings.Default.AutoUpdatePreReleaseConfigUrl;
-            }
-            else if (isUrlAccessibleResult is { IsAccessible: true, IsProxyActive: true })
-            {
-                AutoUpdater.Proxy = new WebProxy(SettingsController.CurrentSettings.ProxyUrlWithPort);
-                currentUpdateUrl = Settings.Default.AutoUpdateConfigUrl;
+                currentUpdateUrl = checkUrl;
             }
             else if (isUrlAccessibleResult is { IsAccessible: true, IsProxyActive: false })
             {
-                currentUpdateUrl = Settings.Default.AutoUpdateConfigUrl;
+                currentUpdateUrl = checkUrl;
             }
 
             if (string.IsNullOrEmpty(currentUpdateUrl))
@@ -51,7 +55,8 @@ public static class AutoUpdateController
                 return;
             }
 
-            AutoUpdater.Synchronous = true;
+            // Arkaplanda indirme icin Synchronous=false
+            AutoUpdater.Synchronous = false;
             AutoUpdater.ApplicationExitEvent -= AutoUpdaterApplicationExit;
 
             DirectoryController.CreateDirectoryWhenNotExists(updateDirPath);
@@ -60,8 +65,8 @@ public static class AutoUpdateController
             AutoUpdater.ExecutablePath = executablePath;
             AutoUpdater.RunUpdateAsAdmin = false;
             AutoUpdater.ReportErrors = reportErrors;
-            AutoUpdater.ShowSkipButton = false;
-            AutoUpdater.TopMost = true;
+            AutoUpdater.ShowSkipButton = true;
+            AutoUpdater.TopMost = false;
 
             AutoUpdater.Start(currentUpdateUrl);
 
@@ -94,7 +99,7 @@ public static class AutoUpdateController
 
         try
         {
-            foreach (var filePath in Directory.GetFiles(path, "StatisticsAnalysis-AlbionOnline-*-x64.zip"))
+            foreach (var filePath in Directory.GetFiles(path, "AlbionAAK-*-x64.zip"))
             {
                 if (File.Exists(filePath))
                 {

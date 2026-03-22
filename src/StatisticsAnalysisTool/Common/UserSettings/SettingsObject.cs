@@ -10,7 +10,7 @@ namespace StatisticsAnalysisTool.Common.UserSettings;
 
 public class SettingsObject
 {
-    public string CurrentCultureIetfLanguageTag { get; set; }
+    public string CurrentCultureIetfLanguageTag { get; set; } = "tr-TR";
     public int RefreshRate { get; set; } = 10000;
     public string PacketFilter { get; set; } = "(ip or ip6) and (udp and (port 5055 or port 5056 or port 5058))";
     public PacketProviderKind PacketProvider { get; set; } = PacketProviderKind.Npcap;
@@ -103,6 +103,7 @@ public class SettingsObject
     public bool IsReSpecStatsVisible { get; set; } = true;
     public bool IsRepairCostsStatsVisible { get; set; } = true;
     public string ProxyUrlWithPort { get; set; }
+    public string UpdateXmlUrl { get; set; } = "https://raw.githubusercontent.com/srknsrt/AlbionOnline-AAK/main/src/StatisticsAnalysisTool/ao-update-check.xml";
     public string DebugConsoleFilter { get; set; }
     public bool IsOpenDebugConsoleWhenStartingTheToolChecked { get; set; } = false;
     public int NetworkDevice { get; set; } = -1;

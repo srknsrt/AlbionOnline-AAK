@@ -104,6 +104,9 @@ Source: "{#PublishDir}\*.pdb";                   DestDir: "{app}"; Flags: ignore
 ; WebView2 native runtime
 Source: "{#PublishDir}\runtimes\*";              DestDir: "{app}\runtimes"; Flags: ignoreversion recursesubdirs createallsubdirs skipifsourcedoesntexist
 
+; Kelebek Tracker (lokal - GitHub'a dahil edilmez)
+Source: "{#PublishDir}\Trackers\*";              DestDir: "{app}\Trackers"; Flags: ignoreversion recursesubdirs createallsubdirs skipifsourcedoesntexist
+
 ; Npcap installer (dependencies klasorune manuel eklenmelidir)
 Source: "dependencies\npcap-installer.exe";      DestDir: "{tmp}"; Flags: ignoreversion skipifsourcedoesntexist
 

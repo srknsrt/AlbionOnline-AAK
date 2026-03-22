@@ -1,0 +1,81 @@
+<UserControl x:Class="StatisticsAnalysisTool.UserControls.KelebekTrackerControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="1000">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Açıklama -->
+        <TextBlock Grid.Row="0" Text="Kelebek Tracker - Guild Üyesi Stats ve Might Takibi"
+                   FontSize="16" FontWeight="Bold" Foreground="White"
+                   Margin="0,0,0,10"/>
+
+        <!-- Kontroller -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
+
+            <!-- Oyuncu Stats Tracker -->
+            <Border BorderBrush="#444" BorderThickness="1" CornerRadius="4" Padding="10" Margin="0,0,10,0">
+                <StackPanel>
+                    <TextBlock Text="Oyuncu Stats Tracker" FontWeight="Bold" Foreground="White" Margin="0,0,0,8"/>
+                    <TextBlock Text="Guild üyesine sağ tıkla → Stats de!" Foreground="#aaa" FontSize="11" Margin="0,0,0,8"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="StatsBaslatBtn" Content="▶  Başlat" Click="StatsBaslat_Click"
+                                Padding="10,5" Margin="0,0,5,0"
+                                Background="#2d7a2d" Foreground="White" BorderThickness="0"/>
+                        <Button x:Name="StatsDurdurBtn" Content="■  Durdur" Click="StatsDurdur_Click"
+                                Padding="10,5" Margin="0,0,10,0" IsEnabled="False"
+                                Background="#7a2d2d" Foreground="White" BorderThickness="0"/>
+                        <Ellipse x:Name="StatsStatusDot" Width="12" Height="12"
+                                 Fill="#555" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Might Tracker -->
+            <Border BorderBrush="#444" BorderThickness="1" CornerRadius="4" Padding="10" Margin="0,0,10,0">
+                <StackPanel>
+                    <TextBlock Text="Might Tracker" FontWeight="Bold" Foreground="White" Margin="0,0,0,8"/>
+                    <TextBlock Text="Guild → Season → Might kategorilerine tıkla" Foreground="#aaa" FontSize="11" Margin="0,0,0,8"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MightBaslatBtn" Content="▶  Başlat" Click="MightBaslat_Click"
+                                Padding="10,5" Margin="0,0,5,0"
+                                Background="#2d7a2d" Foreground="White" BorderThickness="0"/>
+                        <Button x:Name="MightDurdurBtn" Content="■  Durdur" Click="MightDurdur_Click"
+                                Padding="10,5" Margin="0,0,10,0" IsEnabled="False"
+                                Background="#7a2d2d" Foreground="White" BorderThickness="0"/>
+                        <Ellipse x:Name="MightStatusDot" Width="12" Height="12"
+                                 Fill="#555" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Konsol temizle -->
+            <Button Content="🗑  Temizle" Click="Temizle_Click"
+                    Padding="10,5" VerticalAlignment="Bottom"
+                    Background="#444" Foreground="White" BorderThickness="0"/>
+        </StackPanel>
+
+        <!-- Konsol Çıktısı -->
+        <Border Grid.Row="2" BorderBrush="#333" BorderThickness="1" CornerRadius="4">
+            <ScrollViewer x:Name="KonsolScroll" VerticalScrollBarVisibility="Auto">
+                <TextBox x:Name="KonsolCikti"
+                         IsReadOnly="True"
+                         TextWrapping="Wrap"
+                         FontFamily="Consolas"
+                         FontSize="12"
+                         Background="#0d0d0d"
+                         Foreground="#00ff00"
+                         BorderThickness="0"
+                         Padding="8"
+                         VerticalAlignment="Stretch"/>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</UserControl>
