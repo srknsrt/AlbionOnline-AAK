@@ -38,7 +38,7 @@ AllowNoIcons=yes
 LicenseFile=
 OutputDir={#OutputDir}
 OutputBaseFilename=AlbionAAK-v{#MyAppVersion}-Setup
-SetupIconFile=..\src\StatisticsAnalysisTool\sat-icon.ico
+SetupIconFile=..\src\StatisticsAnalysisTool\Assets\logo.ico
 Compression=lzma2/ultra64
 SolidCompression=yes
 WizardStyle=modern
@@ -122,7 +122,7 @@ Name: "desktopicon"; Description: "Masaüstü kısayolu oluştur"; GroupDescript
 
 ; ── Kurulum sonrasi calistir ──────────────────────────────────
 [Run]
-Filename: "{app}\{#MyAppExeName}"; Description: "Uygulamayı şimdi başlat"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\{#MyAppExeName}"; Description: "Uygulamayı şimdi başlat"; Flags: nowait postinstall skipifsilent shellexec
 
 ; ── Kod bolumu: Onkosul kontrolleri ─────────────────────────
 [Code]

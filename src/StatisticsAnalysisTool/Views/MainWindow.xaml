@@ -11,6 +11,7 @@
         mc:Ignorable="d"
         d:DesignHeight="650" d:DesignWidth="1000"
         Title="Albion Online At Arayan Kelebekler Tools"
+        Icon="/Assets/logo.ico"
         Closing="MainWindow_OnClosing"
         d:DataContext="{d:DesignInstance Type=viewModels:MainWindowViewModel}"
         Style="{StaticResource MainWindowStyle}">
