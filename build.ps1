@@ -218,7 +218,7 @@ if (Test-Path $TrackerSrc) {
 if ($UpdateVersionXml) {
     Write-Step "ao-update-check.xml guncelleniyor..."
     $verShort = ($Version -split "\." | Select-Object -First 3) -join "."
-    $releaseUrl  = "https://github.com/srknsrt/AlbionOnline-AAK/releases/download/v${verShort}/AlbionAAK-v${verShort}-x64.zip"
+    $releaseUrl  = "https://github.com/srknsrt/AlbionOnline-AAK/releases/download/v${verShort}/AlbionAAK-v${Version}-Setup.exe"
     $changelogUrl = "https://github.com/srknsrt/AlbionOnline-AAK/releases"
     $xmlContent = "<?xml version=""1.0"" encoding=""UTF-8""?>`n<item>`n`t<version>$Version</version>`n`t<url>$releaseUrl</url>`n`t<changelog>$changelogUrl</changelog>`n`t<mandatory>false</mandatory>`n</item>`n"
     Set-Content -Path $UpdateXml -Value $xmlContent -Encoding UTF8
