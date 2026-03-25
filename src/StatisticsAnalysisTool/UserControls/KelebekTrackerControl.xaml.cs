@@ -20,8 +20,7 @@ public partial class KelebekTrackerControl : UserControl
         InitializeComponent();
         KonsolYaz("[Kelebek Tracker hazır]\n");
         KonsolYaz($"Tracker klasörü: {TrackerDir}\n");
-        KonsolYaz("Başlat butonuna basınca admin onayı (UAC) istenir — izin verin.\n");
-        KonsolYaz("Tracker kendi konsol penceresinde açılır.\n\n");
+        KonsolYaz("Paketler bellekte birikir → 'Veritabanına Aktar' ile kaydet.\n\n");
     }
 
     // ── Oyuncu Stats Tracker ─────────────────────────────────────
@@ -55,11 +54,30 @@ public partial class KelebekTrackerControl : UserControl
         KonsolYaz("[Stats Tracker durduruldu]\n");
     }
 
+    private void StatsFlush_Click(object sender, RoutedEventArgs e)
+    {
+        if (_statsProcess == null || _statsProcess.HasExited)
+        {
+            KonsolYaz("[HATA] Stats Tracker çalışmıyor.\n");
+            return;
+        }
+        try
+        {
+            _statsProcess.StandardInput.WriteLine("FLUSH");
+            KonsolYaz("[💾 Veritabanına aktarma komutu gönderildi...]\n");
+        }
+        catch (Exception ex)
+        {
+            KonsolYaz($"[HATA] Komut gönderilemedi: {ex.Message}\n");
+        }
+    }
+
     private void StatsStatusGuncelle(bool calisiyor)
     {
         StatsStatusDot.Fill = calisiyor ? Brushes.LimeGreen : new SolidColorBrush(Color.FromRgb(85, 85, 85));
         StatsBaslatBtn.IsEnabled = !calisiyor;
         StatsDurdurBtn.IsEnabled = calisiyor;
+        StatsFlushBtn.IsEnabled = calisiyor;
     }
 
     // ── Might Tracker ────────────────────────────────────────────
@@ -93,11 +111,30 @@ public partial class KelebekTrackerControl : UserControl
         KonsolYaz("[Might Tracker durduruldu]\n");
     }
 
+    private void MightFlush_Click(object sender, RoutedEventArgs e)
+    {
+        if (_mightProcess == null || _mightProcess.HasExited)
+        {
+            KonsolYaz("[HATA] Might Tracker çalışmıyor.\n");
+            return;
+        }
+        try
+        {
+            _mightProcess.StandardInput.WriteLine("FLUSH");
+            KonsolYaz("[💾 Veritabanına aktarma komutu gönderildi...]\n");
+        }
+        catch (Exception ex)
+        {
+            KonsolYaz($"[HATA] Komut gönderilemedi: {ex.Message}\n");
+        }
+    }
+
     private void MightStatusGuncelle(bool calisiyor)
     {
         MightStatusDot.Fill = calisiyor ? Brushes.LimeGreen : new SolidColorBrush(Color.FromRgb(85, 85, 85));
         MightBaslatBtn.IsEnabled = !calisiyor;
         MightDurdurBtn.IsEnabled = calisiyor;
+        MightFlushBtn.IsEnabled = calisiyor;
     }
 
     // ── Yardımcı Metodlar ────────────────────────────────────────
@@ -113,6 +150,7 @@ public partial class KelebekTrackerControl : UserControl
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
+                RedirectStandardInput = true,
                 CreateNoWindow = true,
                 StandardOutputEncoding = System.Text.Encoding.UTF8
             };

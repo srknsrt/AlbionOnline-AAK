@@ -30,8 +30,11 @@
                                 Padding="10,5" Margin="0,0,5,0"
                                 Background="#2d7a2d" Foreground="White" BorderThickness="0"/>
                         <Button x:Name="StatsDurdurBtn" Content="■  Durdur" Click="StatsDurdur_Click"
-                                Padding="10,5" Margin="0,0,10,0" IsEnabled="False"
+                                Padding="10,5" Margin="0,0,5,0" IsEnabled="False"
                                 Background="#7a2d2d" Foreground="White" BorderThickness="0"/>
+                        <Button x:Name="StatsFlushBtn" Content="💾  Veritabanına Aktar" Click="StatsFlush_Click"
+                                Padding="10,5" Margin="0,0,10,0" IsEnabled="False"
+                                Background="#2d5a7a" Foreground="White" BorderThickness="0"/>
                         <Ellipse x:Name="StatsStatusDot" Width="12" Height="12"
                                  Fill="#555" VerticalAlignment="Center"/>
                     </StackPanel>
@@ -48,8 +51,11 @@
                                 Padding="10,5" Margin="0,0,5,0"
                                 Background="#2d7a2d" Foreground="White" BorderThickness="0"/>
                         <Button x:Name="MightDurdurBtn" Content="■  Durdur" Click="MightDurdur_Click"
-                                Padding="10,5" Margin="0,0,10,0" IsEnabled="False"
+                                Padding="10,5" Margin="0,0,5,0" IsEnabled="False"
                                 Background="#7a2d2d" Foreground="White" BorderThickness="0"/>
+                        <Button x:Name="MightFlushBtn" Content="💾  Veritabanına Aktar" Click="MightFlush_Click"
+                                Padding="10,5" Margin="0,0,10,0" IsEnabled="False"
+                                Background="#2d5a7a" Foreground="White" BorderThickness="0"/>
                         <Ellipse x:Name="MightStatusDot" Width="12" Height="12"
                                  Fill="#555" VerticalAlignment="Center"/>
                     </StackPanel>
