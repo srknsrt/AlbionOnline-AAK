@@ -110,6 +110,12 @@
     <Content Include="Localization\localization.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Avalon\avalon_maps.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Avalon\avalon_map_images\maps\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="sat-icon.ico">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
@@ -263,6 +269,7 @@
     <Resource Include="Assets\map_yellow_icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\Fonts\HisHeartIsMine.ttf" />
     <Resource Include="Assets\MiniMapMarker\group_dungeon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

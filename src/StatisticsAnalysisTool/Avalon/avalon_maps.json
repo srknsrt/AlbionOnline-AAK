@@ -1,0 +1,2650 @@
+[
+  {
+    "name": "Cases-Ugumlos",
+    "tier": 6,
+    "image": "Cases-Ugumlos_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x STONE small, 1x WOOD small, 1x ORE small, 1x HIDE small"
+  },
+  {
+    "name": "Qiient-Al-Tersas",
+    "tier": 6,
+    "image": "Qiient-Al-Tersas_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small, 1x ORE small"
+  },
+  {
+    "name": "Quantun-Et-Nusas",
+    "tier": 6,
+    "image": "Quantun-Et-Nusas_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "2x STONE small"
+  },
+  {
+    "name": "Settun-Et-Odetum",
+    "tier": 6,
+    "image": "Settun-Et-Odetum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Qiitun-Al-Duosum",
+    "tier": 6,
+    "image": "Qiitun-Al-Duosum_T_6.png",
+    "chests": "2x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Fieos-Atezsum",
+    "tier": 4,
+    "image": "Fieos-Atezsum_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "2x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Tebitos-Igaelum",
+    "tier": 4,
+    "image": "Tebitos-Igaelum_T_4.png",
+    "chests": "1x BLUE small, 7x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Oebos-Ixakaum",
+    "tier": 4,
+    "image": "Oebos-Ixakaum_T_4.png",
+    "chests": "4x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x ORE small"
+  },
+  {
+    "name": "Qiitun-Si-Vynsom",
+    "tier": 6,
+    "image": "Qiitun-Si-Vynsom_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small, 1x HIDE small"
+  },
+  {
+    "name": "Casos-Aiagsum",
+    "tier": 4,
+    "image": "Casos-Aiagsum_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 2x HIDE small"
+  },
+  {
+    "name": "Cebos-Avemlum",
+    "tier": 4,
+    "image": "Cebos-Avemlum_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 1x STONE small, 1x WOOD small"
+  },
+  {
+    "name": "Cetitos-Aiayrom",
+    "tier": 6,
+    "image": "Cetitos-Aiayrom_T_6.png",
+    "chests": "1x BLUE small, 3x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small, 1x STONE small"
+  },
+  {
+    "name": "Cetitos-Avixnum",
+    "tier": 6,
+    "image": "Cetitos-Avixnum_T_6.png",
+    "chests": "1x BLUE small, 7x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 1x WOOD small, 1x ORE small"
+  },
+  {
+    "name": "Cetitos-Aximam",
+    "tier": 6,
+    "image": "Cetitos-Aximam_T_6.png",
+    "chests": "2x BLUE small, 1x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "2x ORE small"
+  },
+  {
+    "name": "Cieites-Ugumlos",
+    "tier": 6,
+    "image": "Cieites-Ugumlos_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x STONE small, 1x HIDE small, 1x ORE small"
+  },
+  {
+    "name": "Cieitos-Ayosrom",
+    "tier": 6,
+    "image": "Cieitos-Ayosrom_T_6.png",
+    "chests": "6x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x STONE small, 1x HIDE small, 2x WOOD small"
+  },
+  {
+    "name": "Cieitos-Obaelos",
+    "tier": 4,
+    "image": "Cieitos-Obaelos_T_4.png",
+    "chests": "2x BLUE small, 3x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Cieos-Atatlum",
+    "tier": 6,
+    "image": "Cieos-Atatlum_T_6.png",
+    "chests": "1x GOLD small, 5x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Cilitos-Opodam",
+    "tier": 6,
+    "image": "Cilitos-Opodam_T_6.png",
+    "chests": "3x GOLD small, 1x BLUE small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Conos-Avaelum",
+    "tier": 6,
+    "image": "Conos-Avaelum_T_6.png",
+    "chests": "8x GREEN small, 1x GOLD small",
+    "dungeons": "",
+    "resources": "1x STONE small"
+  },
+  {
+    "name": "Coros-Atinaum",
+    "tier": 6,
+    "image": "Coros-Atinaum_T_6.png",
+    "chests": "3x GOLD small, 1x BLUE small, 3x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Couos-Ayayaum",
+    "tier": 6,
+    "image": "Couos-Ayayaum_T_6.png",
+    "chests": "2x GOLD small, 1x BLUE small, 3x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small, 1x WOOD small"
+  },
+  {
+    "name": "Curites-Exakrom",
+    "tier": 4,
+    "image": "Curites-Exakrom_T_4.png",
+    "chests": "1x BLUE small, 8x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Cuyites-Iooinum",
+    "tier": 4,
+    "image": "Cuyites-Iooinum_T_4.png",
+    "chests": "1x BLUE small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "2x ORE small, 1x COTTON small"
+  },
+  {
+    "name": "Cynitos-Aiagsum",
+    "tier": 4,
+    "image": "Cynitos-Aiagsum_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 2x HIDE small"
+  },
+  {
+    "name": "Cynitos-Atatlum",
+    "tier": 6,
+    "image": "Cynitos-Atatlum_T_6.png",
+    "chests": "1x GOLD small, 5x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Cynos-Avixnum",
+    "tier": 6,
+    "image": "Cynos-Avixnum_T_6.png",
+    "chests": "7x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 1x WOOD small, 1x ORE small"
+  },
+  {
+    "name": "Fasitos-Oleraum",
+    "tier": 6,
+    "image": "Fasitos-Oleraum_T_6.png",
+    "chests": "3x GOLD small, 1x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x ORE small, 1x HIDE small"
+  },
+  {
+    "name": "Fasos-Ayiotum",
+    "tier": 6,
+    "image": "Fasos-Ayiotum_T_6.png",
+    "chests": "1x BLUE small, 3x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small, 1x WOOD small, 1x STONE small"
+  },
+  {
+    "name": "Feritos-Enomaum",
+    "tier": 4,
+    "image": "Feritos-Enomaum_T_4.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small, 1x ORE small, 1x HIDE small"
+  },
+  {
+    "name": "Fetos-Aiaylos",
+    "tier": 6,
+    "image": "Fetos-Aiaylos_T_6.png",
+    "chests": "1x BLUE small, 6x GREEN small",
+    "dungeons": "4x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Fiees-Ohohtum",
+    "tier": 8,
+    "image": "Fiees-Ohohtum_T_8.png",
+    "chests": "6x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "2x STONE small"
+  },
+  {
+    "name": "Fieos-Aiuttum",
+    "tier": 6,
+    "image": "Fieos-Aiuttum_T_6.png",
+    "chests": "3x GOLD small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 1x HIDE small, 1x ORE small"
+  },
+  {
+    "name": "Filites-Izohun",
+    "tier": 8,
+    "image": "Filites-Izohun_T_8.png",
+    "chests": "1x BLUE small, 5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x HIDE small"
+  },
+  {
+    "name": "Firos-Enomaum",
+    "tier": 4,
+    "image": "Firos-Enomaum_T_4.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small, 1x ORE small, 1x HIDE small"
+  },
+  {
+    "name": "Firos-Ezatam",
+    "tier": 8,
+    "image": "Firos-Ezatam_T_8.png",
+    "chests": "1x GOLD small, 1x BLUE small, 4x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Fonos-Aiugsum",
+    "tier": 4,
+    "image": "Fonos-Aiugsum_T_4.png",
+    "chests": "",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "2x STONE small, 1x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Fonos-Oleraum",
+    "tier": 6,
+    "image": "Fonos-Oleraum_T_6.png",
+    "chests": "3x GOLD small, 1x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x HIDE small, 1x ORE small"
+  },
+  {
+    "name": "Foritos-Aiaylos",
+    "tier": 6,
+    "image": "Foritos-Aiaylos_T_6.png",
+    "chests": "1x BLUE small, 6x GREEN small",
+    "dungeons": "4x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Foues-Aeaosum",
+    "tier": 4,
+    "image": "Foues-Aeaosum_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x HIDE small, 1x ORE small"
+  },
+  {
+    "name": "Fouitos-Aiattum",
+    "tier": 6,
+    "image": "Fouitos-Aiattum_T_6.png",
+    "chests": "3x GOLD small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 1x ORE small"
+  },
+  {
+    "name": "Furitos-Aiavam",
+    "tier": 6,
+    "image": "Furitos-Aiavam_T_6.png",
+    "chests": "2x GOLD small, 1x BLUE small, 3x GREEN small",
+    "dungeons": "",
+    "resources": "1x ORE small"
+  },
+  {
+    "name": "Fuyes-Izohun",
+    "tier": 8,
+    "image": "Fuyes-Izohun_T_8.png",
+    "chests": "1x BLUE small, 5x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small"
+  },
+  {
+    "name": "Fynitos-Abalam",
+    "tier": 4,
+    "image": "Fynitos-Abalam_T_4.png",
+    "chests": "2x BLUE small, 4x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Fynitos-Ezatam",
+    "tier": 8,
+    "image": "Fynitos-Ezatam_T_8.png",
+    "chests": "1x GOLD small, 1x BLUE small, 4x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Hasitos-Avaolum",
+    "tier": 6,
+    "image": "Hasitos-Avaolum_T_6.png",
+    "chests": "1x BLUE small, 6x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small, 1x HIDE small"
+  },
+  {
+    "name": "Hasos-Iuimaum",
+    "tier": 6,
+    "image": "Hasos-Iuimaum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "2x WOOD small, 1x ORE small, 1x HIDE small"
+  },
+  {
+    "name": "Hasos-Osuorom",
+    "tier": 6,
+    "image": "Hasos-Osuorom_T_6.png",
+    "chests": "2x GOLD small, 1x BLUE small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Hebites-Exemrom",
+    "tier": 4,
+    "image": "Hebites-Exemrom_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "2x ORE small, 1x STONE small"
+  },
+  {
+    "name": "Hebitos-Atontum",
+    "tier": 6,
+    "image": "Hebitos-Atontum_T_6.png",
+    "chests": "2x GOLD small, 3x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x STONE small"
+  },
+  {
+    "name": "Heritos-Inayaum",
+    "tier": 6,
+    "image": "Heritos-Inayaum_T_6.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Heros-Atoyam",
+    "tier": 6,
+    "image": "Heros-Atoyam_T_6.png",
+    "chests": "1x GOLD small, 1x BLUE small, 3x GREEN small",
+    "dungeons": "3x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Hilites-Ugumtum",
+    "tier": 6,
+    "image": "Hilites-Ugumtum_T_6.png",
+    "chests": "8x GREEN small",
+    "dungeons": "",
+    "resources": "1x ORE small, 1x HIDE small, 1x STONE small"
+  },
+  {
+    "name": "Honos-Umayaum",
+    "tier": 6,
+    "image": "Honos-Umayaum_T_6.png",
+    "chests": "1x BLUE small, 3x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x COTTON small, 1x STONE small"
+  },
+  {
+    "name": "Horos-Ohenlum",
+    "tier": 6,
+    "image": "Horos-Ohenlum_T_6.png",
+    "chests": "1x GOLD small, 3x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x STONE small, 1x WOOD small"
+  },
+  {
+    "name": "Hurites-Ouaylos",
+    "tier": 4,
+    "image": "Hurites-Ouaylos_T_4.png",
+    "chests": "1x BLUE small, 8x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small"
+  },
+  {
+    "name": "Huritos-Iuimaum",
+    "tier": 6,
+    "image": "Huritos-Iuimaum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "2x WOOD small, 1x ORE small, 1x HIDE small"
+  },
+  {
+    "name": "Huritos-Oiaelos",
+    "tier": 6,
+    "image": "Huritos-Oiaelos_T_6.png",
+    "chests": "1x BLUE small, 9x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Huros-Atontum",
+    "tier": 6,
+    "image": "Huros-Atontum_T_6.png",
+    "chests": "2x GOLD small, 3x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small, 1x WOOD small"
+  },
+  {
+    "name": "Huyitos-Agoitum",
+    "tier": 6,
+    "image": "Huyitos-Agoitum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x COTTON small, 1x STONE small"
+  },
+  {
+    "name": "Huyos-Eyoztum",
+    "tier": 6,
+    "image": "Huyos-Eyoztum_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "1x HIDE small, 2x STONE small"
+  },
+  {
+    "name": "Hynes-Exemrom",
+    "tier": 4,
+    "image": "Hynes-Exemrom_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 2x STONE small, 2x ORE small"
+  },
+  {
+    "name": "Hynitos-Atoyam",
+    "tier": 6,
+    "image": "Hynitos-Atoyam_T_6.png",
+    "chests": "1x GOLD small, 1x BLUE small, 3x GREEN small",
+    "dungeons": "3x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Hynitos-Ayousum",
+    "tier": 6,
+    "image": "Hynitos-Ayousum_T_6.png",
+    "chests": "1x GOLD small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 2x COTTON small"
+  },
+  {
+    "name": "Hynitos-Ulamsum",
+    "tier": 6,
+    "image": "Hynitos-Ulamsum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x HIDE small, 1x WOOD small, 2x STONE small"
+  },
+  {
+    "name": "Hynos-Oiaelos",
+    "tier": 6,
+    "image": "Hynos-Oiaelos_T_6.png",
+    "chests": "1x BLUE small, 9x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Oetos-Ofailos",
+    "tier": 6,
+    "image": "Oetos-Ofailos_T_6.png",
+    "chests": "1x GOLD small, 4x GREEN small",
+    "dungeons": "3x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Oetos-Oyexlos",
+    "tier": 6,
+    "image": "Oetos-Oyexlos_T_6.png",
+    "chests": "1x GOLD small, 4x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x WOOD small, 1x STONE small, 1x COTTON small"
+  },
+  {
+    "name": "Oieitos-Ixakaum",
+    "tier": 4,
+    "image": "Oieitos-Ixakaum_T_4.png",
+    "chests": "4x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "2x WOOD small, 1x ORE small"
+  },
+  {
+    "name": "Oures-Araosum",
+    "tier": 6,
+    "image": "Oures-Araosum_T_6.png",
+    "chests": "3x GREEN small",
+    "dungeons": "3x DUNGEON_SOLO small",
+    "resources": "1x HIDE small, 1x COTTON small, 1x ORE small, 1x STONE small"
+  },
+  {
+    "name": "Ouritos-Ataltum",
+    "tier": 6,
+    "image": "Ouritos-Ataltum_T_6.png",
+    "chests": "2x GOLD small, 5x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small"
+  },
+  {
+    "name": "Ouritos-Ofailos",
+    "tier": 6,
+    "image": "Ouritos-Ofailos_T_6.png",
+    "chests": "1x GOLD small, 4x GREEN small",
+    "dungeons": "3x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Oynites-Oloblum",
+    "tier": 6,
+    "image": "Oynites-Oloblum_T_6.png",
+    "chests": "2x GOLD small, 1x GREEN small",
+    "dungeons": "3x DUNGEON_SOLO small",
+    "resources": "1x HIDE small, 1x COTTON small"
+  },
+  {
+    "name": "Oynos-Eramtum",
+    "tier": 6,
+    "image": "Oynos-Eramtum_T_6.png",
+    "chests": "2x GOLD small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x STONE small, 2x WOOD small, 1x ORE small, 1x HIDE small"
+  },
+  {
+    "name": "Peritos-Avosam",
+    "tier": 4,
+    "image": "Peritos-Avosam_T_4.png",
+    "chests": "1x BLUE small, 3x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Peritos-Oconun",
+    "tier": 4,
+    "image": "Peritos-Oconun_T_4.png",
+    "chests": "1x BLUE small, 3x GREEN small",
+    "dungeons": "",
+    "resources": "3x HIDE small, 1x STONE small"
+  },
+  {
+    "name": "Peros-Aiataum",
+    "tier": 6,
+    "image": "Peros-Aiataum_T_6.png",
+    "chests": "3x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "1x HIDE small, 1x STONE small"
+  },
+  {
+    "name": "Petitos-Amayam",
+    "tier": 4,
+    "image": "Petitos-Amayam_T_4.png",
+    "chests": "1x BLUE small, 4x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Pieos-Eterrom",
+    "tier": 4,
+    "image": "Pieos-Eterrom_T_4.png",
+    "chests": "6x GREEN small",
+    "dungeons": "",
+    "resources": "2x STONE small, 1x WOOD small, 1x HIDE small, 1x COTTON small"
+  },
+  {
+    "name": "Piritos-Opabrom",
+    "tier": 6,
+    "image": "Piritos-Opabrom_T_6.png",
+    "chests": "2x GOLD small, 4x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Poros-Aiayrom",
+    "tier": 4,
+    "image": "Poros-Aiayrom_T_4.png",
+    "chests": "4x GREEN small",
+    "dungeons": "3x DUNGEON_SOLO small",
+    "resources": "1x STONE small, 1x WOOD small, 1x ORE small"
+  },
+  {
+    "name": "Poros-Oconun",
+    "tier": 4,
+    "image": "Poros-Oconun_T_4.png",
+    "chests": "1x BLUE small, 3x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small, 3x HIDE small"
+  },
+  {
+    "name": "Puyitos-Aiataum",
+    "tier": 6,
+    "image": "Puyitos-Aiataum_T_6.png",
+    "chests": "3x GREEN small",
+    "dungeons": "3x DUNGEON_SOLO small",
+    "resources": "1x HIDE small"
+  },
+  {
+    "name": "Qiient-Tersom",
+    "tier": 6,
+    "image": "Qiient-Tersom_T_6.png",
+    "chests": "2x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small, 1x WOOD small"
+  },
+  {
+    "name": "Quaent-Al-Viesom",
+    "tier": 6,
+    "image": "Quaent-Al-Viesom_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "2x ORE small"
+  },
+  {
+    "name": "Quaent-Al-Vynsum",
+    "tier": 6,
+    "image": "Quaent-Al-Vynsum_T_6.png",
+    "chests": "1x BLUE small, 5x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small"
+  },
+  {
+    "name": "Quaent-Al-Nusis",
+    "tier": 6,
+    "image": "Quaent-Al-Nusis_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 1x STONE small"
+  },
+  {
+    "name": "Quatun-Et-Nusas",
+    "tier": 6,
+    "image": "Quatun-Et-Nusas_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "2x STONE small"
+  },
+  {
+    "name": "Quatun-Nusas",
+    "tier": 6,
+    "image": "Quatun-Nusas_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "2x STONE small, 1x WOOD small"
+  },
+  {
+    "name": "Sases-Aoarsum",
+    "tier": 4,
+    "image": "Sases-Aoarsum_T_4.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "2x COTTON small, 1x HIDE small, 1x ORE small"
+  },
+  {
+    "name": "Sasitos-Umogaum",
+    "tier": 4,
+    "image": "Sasitos-Umogaum_T_4.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "2x WOOD small, 1x STONE small, 1x ORE small"
+  },
+  {
+    "name": "Secent-AI-Odetis",
+    "tier": 6,
+    "image": "Secent-AI-Odetis_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small"
+  },
+  {
+    "name": "Secent-Al-Duosom",
+    "tier": 6,
+    "image": "Secent-Al-Duosom_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small, 1x ORE small"
+  },
+  {
+    "name": "Secent-Et-Vyntum",
+    "tier": 6,
+    "image": "Secent-Et-Vyntum_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "2x WOOD small"
+  },
+  {
+    "name": "Sectun-in-Vyntis",
+    "tier": 6,
+    "image": "Sectun-in-Vyntis_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small, 1x HIDE small"
+  },
+  {
+    "name": "Sectun-Al-Vyntis",
+    "tier": 6,
+    "image": "Sectun-Al-Vyntis_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small, 1x HIDE small"
+  },
+  {
+    "name": "Sectun-Tersas",
+    "tier": 6,
+    "image": "Sectun-Tersas_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small, 1x ORE small"
+  },
+  {
+    "name": "Setitos-Obobrom",
+    "tier": 6,
+    "image": "Setitos-Obobrom_T_6.png",
+    "chests": "2x GOLD small, 1x BLUE small, 2x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Settun-Al-Odetum",
+    "tier": 6,
+    "image": "Settun-Al-Odetum_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small"
+  },
+  {
+    "name": "Sieos-Ofugtum",
+    "tier": 6,
+    "image": "Sieos-Ofugtum_T_6.png",
+    "chests": "3x GOLD small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x STONE small"
+  },
+  {
+    "name": "Siritos-Avoirom",
+    "tier": 4,
+    "image": "Siritos-Avoirom_T_4.png",
+    "chests": "1x BLUE small, 8x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Soritos-Aiaitum",
+    "tier": 6,
+    "image": "Soritos-Aiaitum_T_6.png",
+    "chests": "1x GOLD small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x ORE small"
+  },
+  {
+    "name": "Soritos-Apenlum",
+    "tier": 4,
+    "image": "Soritos-Apenlum_T_4.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "2x WOOD small, 1x ORE small, 1x STONE small"
+  },
+  {
+    "name": "Soritos-Avamsum",
+    "tier": 6,
+    "image": "Soritos-Avamsum_T_6.png",
+    "chests": "6x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x HIDE small"
+  },
+  {
+    "name": "Souitos-Oiozlum",
+    "tier": 6,
+    "image": "Souitos-Oiozlum_T_6.png",
+    "chests": "3x GOLD small, 1x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x ORE small, 1x STONE small"
+  },
+  {
+    "name": "Souos-Ososlos",
+    "tier": 6,
+    "image": "Souos-Ososlos_T_6.png",
+    "chests": "2x BLUE small, 4x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Synites-Aoarsum",
+    "tier": 4,
+    "image": "Synites-Aoarsum_T_4.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "2x COTTON small, 1x ORE small, 1x HIDE small"
+  },
+  {
+    "name": "Synitos-Availos",
+    "tier": 6,
+    "image": "Synitos-Availos_T_6.png",
+    "chests": "1x GOLD small, 3x GREEN small",
+    "dungeons": "",
+    "resources": "2x COTTON small, 1x WOOD small, 1x STONE small"
+  },
+  {
+    "name": "Synitos-Ofurlos",
+    "tier": 6,
+    "image": "Synitos-Ofurlos_T_6.png",
+    "chests": "2x GOLD small, 1x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Synos-Ayailos",
+    "tier": 4,
+    "image": "Synos-Ayailos_T_4.png",
+    "chests": "1x BLUE small, 7x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Synos-Oyarlos",
+    "tier": 8,
+    "image": "Synos-Oyarlos_T_8.png",
+    "chests": "6x GREEN small",
+    "dungeons": "",
+    "resources": "1x ORE small, 1x STONE small"
+  },
+  {
+    "name": "Tasitos-Obayam",
+    "tier": 6,
+    "image": "Tasitos-Obayam_T_6.png",
+    "chests": "3x BLUE small, 3x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Teros-Auiusum",
+    "tier": 4,
+    "image": "Teros-Auiusum_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 2x STONE small"
+  },
+  {
+    "name": "Tetos-Igaelum",
+    "tier": 4,
+    "image": "Tetos-Igaelum_T_4.png",
+    "chests": "1x BLUE small, 7x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small, 1x WOOD small"
+  },
+  {
+    "name": "Tetos-Ulaurom",
+    "tier": 6,
+    "image": "Tetos-Ulaurom_T_6.png",
+    "chests": "8x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small, 2x ORE small"
+  },
+  {
+    "name": "Tilitos-Ataglos",
+    "tier": 8,
+    "image": "Tilitos-Ataglos_T_8.png",
+    "chests": "1x BLUE small, 9x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Tonitos-Igurlum",
+    "tier": 6,
+    "image": "Tonitos-Igurlum_T_6.png",
+    "chests": "1x GOLD small, 1x BLUE small, 1x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "1x STONE small, 1x ORE small"
+  },
+  {
+    "name": "Tynos-Eyexrom",
+    "tier": 6,
+    "image": "Tynos-Eyexrom_T_6.png",
+    "chests": "2x BLUE small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "2x STONE small, 1x HIDE small, 1x COTTON small"
+  },
+  {
+    "name": "Tynos-Uxavrom",
+    "tier": 6,
+    "image": "Tynos-Uxavrom_T_6.png",
+    "chests": "1x GOLD small, 1x BLUE small, 4x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x STONE small"
+  },
+  {
+    "name": "Xases-Oxoulum",
+    "tier": 6,
+    "image": "Xases-Oxoulum_T_6.png",
+    "chests": "1x BLUE small, 5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x HIDE small"
+  },
+  {
+    "name": "Xebos-Emimsum",
+    "tier": 6,
+    "image": "Xebos-Emimsum_T_6.png",
+    "chests": "4x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x ORE small, 1x WOOD small, 1x STONE small"
+  },
+  {
+    "name": "Xerites-Oxoulum",
+    "tier": 6,
+    "image": "Xerites-Oxoulum_T_6.png",
+    "chests": "1x BLUE small, 5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x HIDE small"
+  },
+  {
+    "name": "Xetitos-Emimsum",
+    "tier": 6,
+    "image": "Xetitos-Emimsum_T_6.png",
+    "chests": "4x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x STONE small, 1x WOOD small, 2x ORE small"
+  },
+  {
+    "name": "Xetos-Obursum",
+    "tier": 6,
+    "image": "Xetos-Obursum_T_6.png",
+    "chests": "1x BLUE small, 5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x ORE small, 1x HIDE small"
+  },
+  {
+    "name": "Xiles-Aiavlum",
+    "tier": 4,
+    "image": "Xiles-Aiavlum_T_4.png",
+    "chests": "1x BLUE small, 6x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Xasos-Aoemaum",
+    "tier": 6,
+    "image": "Xasos-Aoemaum_T_6.png",
+    "chests": "1x GOLD small, 4x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x ORE small, 1x COTTON small, 1x HIDE small, 1x WOOD small"
+  },
+  {
+    "name": "Xilitos-Aoemaum",
+    "tier": 6,
+    "image": "Xilitos-Aoemaum_T_6.png",
+    "chests": "1x GOLD small, 4x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x ORE small, 1x COTTON small, 1x HIDE small, 1x WOOD small"
+  },
+  {
+    "name": "Xilos-Osayam",
+    "tier": 6,
+    "image": "Xilos-Osayam_T_6.png",
+    "chests": "1x GOLD small, 2x BLUE small, 2x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Xiros-Aiairom",
+    "tier": 6,
+    "image": "Xiros-Aiairom_T_6.png",
+    "chests": "2x GOLD small, 1x BLUE small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "1x ORE small"
+  },
+  {
+    "name": "Xoritos-Exostum",
+    "tier": 6,
+    "image": "Xoritos-Exostum_T_6.png",
+    "chests": "1x BLUE small, 5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Xoritos-Osayam",
+    "tier": 6,
+    "image": "Xoritos-Osayam_T_6.png",
+    "chests": "1x GOLD small, 2x BLUE small, 2x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Xuyitos-Aioblos",
+    "tier": 4,
+    "image": "Xuyitos-Aioblos_T_4.png",
+    "chests": "1x BLUE small, 6x GREEN small",
+    "dungeons": "3x DUNGEON_SOLO small",
+    "resources": "1x STONE small"
+  },
+  {
+    "name": "Xynos-Oyogam",
+    "tier": 6,
+    "image": "Xynos-Oyogam_T_6.png",
+    "chests": "2x GOLD small, 2x BLUE small, 1x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x STONE small"
+  },
+  {
+    "name": "Ceres-Iooinum",
+    "tier": 4,
+    "image": "Ceres-Iooinum_T_4.png",
+    "chests": "1x BLUE small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "2x ORE small, 1x COTTON small"
+  },
+  {
+    "name": "Hebes-Ouaylos",
+    "tier": 4,
+    "image": "Hebes-Ouaylos_T_4.png",
+    "chests": "1x BLUE small, 8x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small"
+  },
+  {
+    "name": "Coros-Aiayrom",
+    "tier": 6,
+    "image": "Coros-Aiayrom_T_6.png",
+    "chests": "1x BLUE small, 3x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small, 1x STONE small"
+  },
+  {
+    "name": "Hasitos-Umayaum",
+    "tier": 6,
+    "image": "Hasitos-Umayaum_T_6.png",
+    "chests": "1x BLUE small, 3x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x COTTON small, 1x STONE small"
+  },
+  {
+    "name": "Hebos-Ulamsum",
+    "tier": 6,
+    "image": "Hebos-Ulamsum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x STONE small, 1x WOOD small, 2x HIDE small"
+  },
+  {
+    "name": "Hilitos-Aiigaum",
+    "tier": 4,
+    "image": "Hilitos-Aiigaum_T_4.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "2x ORE small, 1x COTTON small, 1x STONE small"
+  },
+  {
+    "name": "Oiros-Alaiam",
+    "tier": 6,
+    "image": "Oiros-Alaiam_T_6.png",
+    "chests": "1x GOLD small, 2x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Pilitos-Eterrom",
+    "tier": 4,
+    "image": "Pilitos-Eterrom_T_4.png",
+    "chests": "6x GREEN small",
+    "dungeons": "",
+    "resources": "2x STONE small, 1x WOOD small, 1x COTTON small, 1x HIDE small"
+  },
+  {
+    "name": "Secent-Et-Odesis",
+    "tier": 6,
+    "image": "Secent-Et-Odesis_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 1x HIDE small"
+  },
+  {
+    "name": "Secent-Qi-Qinsom",
+    "tier": 6,
+    "image": "Secent-Qi-Qinsom_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 1x HIDE small, 1x ORE small"
+  },
+  {
+    "name": "Toritos-Iriglos",
+    "tier": 6,
+    "image": "Toritos-Iriglos_T_6.png",
+    "chests": "2x GOLD small, 5x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small, 1x STONE small"
+  },
+  {
+    "name": "Secent-Odesom",
+    "tier": 6,
+    "image": "Secent-Odesom_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x ORE small, 1x STONE small"
+  },
+  {
+    "name": "Souos-Availos",
+    "tier": 6,
+    "image": "Souos-Availos_T_6.png",
+    "chests": "1x GOLD small, 3x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 1x WOOD small, 1x STONE small"
+  },
+  {
+    "name": "Curitos-Ayayaum",
+    "tier": 6,
+    "image": "Curitos-Ayayaum_T_6.png",
+    "chests": "2x GOLD small, 1x BLUE small, 3x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small, 1x STONE small"
+  },
+  {
+    "name": "Fasitos-Atezsum",
+    "tier": 4,
+    "image": "Fasitos-Atezsum_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 2x WOOD small"
+  },
+  {
+    "name": "Febos-Acalun",
+    "tier": 4,
+    "image": "Febos-Acalun_T_4.png",
+    "chests": "1x BLUE small",
+    "dungeons": "3x DUNGEON_SOLO small",
+    "resources": "1x HIDE small, 1x STONE small, 1x WOOD small"
+  },
+  {
+    "name": "Filitos-Uzazlum",
+    "tier": 8,
+    "image": "Filitos-Uzazlum_T_8.png",
+    "chests": "6x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 1x STONE small, 1x COTTON small, 1x ORE small"
+  },
+  {
+    "name": "Fynitos-Aiugsum",
+    "tier": 4,
+    "image": "Fynitos-Aiugsum_T_4.png",
+    "chests": "",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "2x STONE small, 1x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Hiros-Iuaerom",
+    "tier": 6,
+    "image": "Hiros-Iuaerom_T_6.png",
+    "chests": "6x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x HIDE small"
+  },
+  {
+    "name": "Hurites-Ieatun",
+    "tier": 8,
+    "image": "Hurites-Ieatun_T_8.png",
+    "chests": "1x GOLD small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x HIDE small"
+  },
+  {
+    "name": "Piritos-Ofavam",
+    "tier": 6,
+    "image": "Piritos-Ofavam_T_6.png",
+    "chests": "1x GOLD small, 3x GREEN small",
+    "dungeons": "4x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Pures-Ouozlum",
+    "tier": 4,
+    "image": "Pures-Ouozlum_T_4.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 1x COTTON small, 1x STONE small"
+  },
+  {
+    "name": "Qiient-Et-Nusas",
+    "tier": 6,
+    "image": "Qiient-Et-Nusas_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 1x ORE small"
+  },
+  {
+    "name": "Secent-Sa-Odesis",
+    "tier": 6,
+    "image": "Secent-Sa-Odesis_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 1x HIDE small"
+  },
+  {
+    "name": "Xuros-Eyoztum",
+    "tier": 4,
+    "image": "Xuros-Eyoztum_T_4.png",
+    "chests": "1x BLUE small, 6x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x STONE small, 1x COTTON small, 1x HIDE small"
+  },
+  {
+    "name": "Petos-Aietam",
+    "tier": 6,
+    "image": "Petos-Aietam_T_6.png",
+    "chests": "4x GOLD small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Qiient-Si-Odesum",
+    "tier": 6,
+    "image": "Qiient-Si-Odesum_T_6.png",
+    "chests": "1x BLUE small, 5x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small"
+  },
+  {
+    "name": "Setent-Nusum",
+    "tier": 6,
+    "image": "Setent-Nusum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small, 1x COTTON small"
+  },
+  {
+    "name": "Siros-Obobrom",
+    "tier": 6,
+    "image": "Siros-Obobrom_T_6.png",
+    "chests": "2x GOLD small, 1x BLUE small, 2x GREEN small",
+    "dungeons": "",
+    "resources": ""
+  },
+  {
+    "name": "Xasos-Oneulum",
+    "tier": 6,
+    "image": "Xasos-Oneulum_T_6.png",
+    "chests": "2x GOLD small, 2x BLUE small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x HIDE small"
+  },
+  {
+    "name": "Files-Azazsum",
+    "tier": 8,
+    "image": "Files-Azazsum_T_8.png",
+    "chests": "7x GREEN small",
+    "dungeons": "",
+    "resources": "2x ORE small, 1x COTTON small"
+  },
+  {
+    "name": "Foros-Egoisum",
+    "tier": 6,
+    "image": "Foros-Egoisum_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "1x STONE small, 1x WOOD small"
+  },
+  {
+    "name": "Ponitos-Aiayrom",
+    "tier": 4,
+    "image": "Ponitos-Aiayrom_T_4.png",
+    "chests": "4x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x STONE small, 1x WOOD small, 1x ORE small"
+  },
+  {
+    "name": "Synitos-Ososlos",
+    "tier": 6,
+    "image": "Synitos-Ososlos_T_6.png",
+    "chests": "2x BLUE small, 4x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Huyitos-Ohenlum",
+    "tier": 6,
+    "image": "Huyitos-Ohenlum_T_6.png",
+    "chests": "1x GOLD small, 3x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x HIDE small, 1x WOOD small"
+  },
+  {
+    "name": "Oires-Oloblum",
+    "tier": 6,
+    "image": "Oires-Oloblum_T_6.png",
+    "chests": "2x GOLD small, 1x GREEN small",
+    "dungeons": "3x DUNGEON_SOLO small",
+    "resources": "1x HIDE small, 1x COTTON small"
+  },
+  {
+    "name": "Pynitos-Aietam",
+    "tier": 6,
+    "image": "Pynitos-Aietam_T_6.png",
+    "chests": "4x GOLD small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Feritos-Osinsum",
+    "tier": 6,
+    "image": "Feritos-Osinsum_T_6.png",
+    "chests": "3x GOLD small, 1x BLUE small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x ORE small"
+  },
+  {
+    "name": "Casitos-Alieam",
+    "tier": 4,
+    "image": "Casitos-Alieam_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 1x ORE small, 1x STONE small"
+  },
+  {
+    "name": "Pieos-Ofairom",
+    "tier": 6,
+    "image": "Pieos-Ofairom_T_6.png",
+    "chests": "1x GOLD small, 5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x ORE small"
+  },
+  {
+    "name": "Qiient-Al-Qinsis",
+    "tier": 6,
+    "image": "Qiient-Al-Qinsis_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small, 1x HIDE small"
+  },
+  {
+    "name": "Fasitos-Oyuctum",
+    "tier": 6,
+    "image": "Fasitos-Oyuctum_T_6.png",
+    "chests": "3x GOLD small, 1x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x STONE small, 1x ORE small"
+  },
+  {
+    "name": "Feros-Oyuctum",
+    "tier": 6,
+    "image": "Feros-Oyuctum_T_6.png",
+    "chests": "3x GOLD small, 1x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x STONE small, 1x ORE small"
+  },
+  {
+    "name": "Fones-Opavun",
+    "tier": 8,
+    "image": "Fones-Opavun_T_8.png",
+    "chests": "3x GOLD small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small"
+  },
+  {
+    "name": "Fuyitos-Acalun",
+    "tier": 4,
+    "image": "Fuyitos-Acalun_T_4.png",
+    "chests": "1x BLUE small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "1x HIDE small, 1x STONE small, 1x WOOD small"
+  },
+  {
+    "name": "Fynes-Unavtum",
+    "tier": 6,
+    "image": "Fynes-Unavtum_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "3x DUNGEON_SOLO small",
+    "resources": "1x COTTON small, 3x ORE small"
+  },
+  {
+    "name": "Oynitos-Uromlum",
+    "tier": 4,
+    "image": "Oynitos-Uromlum_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x HIDE small, 1x COTTON small"
+  },
+  {
+    "name": "Sases-Avuotum",
+    "tier": 6,
+    "image": "Sases-Avuotum_T_6.png",
+    "chests": "6x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 1x COTTON small, 1x ORE small"
+  },
+  {
+    "name": "Qiient-Oc-Odetum",
+    "tier": 6,
+    "image": "Qiient-Oc-Odetum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x ORE small, 1x WOOD small"
+  },
+  {
+    "name": "Xasos-Aeoilos",
+    "tier": 4,
+    "image": "Xasos-Aeoilos_T_4.png",
+    "chests": "3x BLUE small, 3x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Xebos-Exostum",
+    "tier": 6,
+    "image": "Xebos-Exostum_T_6.png",
+    "chests": "1x BLUE small, 5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Suyitos-Ofugtum",
+    "tier": 6,
+    "image": "Suyitos-Ofugtum_T_6.png",
+    "chests": "3x GOLD small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x STONE small"
+  },
+  {
+    "name": "Xebitos-Oyogam",
+    "tier": 6,
+    "image": "Xebitos-Oyogam_T_6.png",
+    "chests": "2x GOLD small, 2x BLUE small, 1x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x STONE small"
+  },
+  {
+    "name": "Tynos-Atatlos",
+    "tier": 4,
+    "image": "Tynos-Atatlos_T_4.png",
+    "chests": "3x BLUE small, 3x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Suyos-Onaytum",
+    "tier": 6,
+    "image": "Suyos-Onaytum_T_6.png",
+    "chests": "1x GOLD small, 1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "2x COTTON small"
+  },
+  {
+    "name": "Setent-Et-Qintis",
+    "tier": 6,
+    "image": "Setent-Et-Qintis_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "2x WOOD small"
+  },
+  {
+    "name": "Siritos-Oyohun",
+    "tier": 8,
+    "image": "Siritos-Oyohun_T_8.png",
+    "chests": "1x GOLD small, 2x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "1x STONE small"
+  },
+  {
+    "name": "Suyites-Uzurtum",
+    "tier": 6,
+    "image": "Suyites-Uzurtum_T_6.png",
+    "chests": "3x GOLD small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x COTTON small, 1x ORE small"
+  },
+  {
+    "name": "Oonitos-Umiutum",
+    "tier": 4,
+    "image": "Oonitos-Umiutum_T_4.png",
+    "chests": "3x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x HIDE small, 1x STONE small, 1x ORE small"
+  },
+  {
+    "name": "Ooros-Ataltum",
+    "tier": 6,
+    "image": "Ooros-Ataltum_T_6.png",
+    "chests": "2x GOLD small, 5x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small"
+  },
+  {
+    "name": "Poues-Unatam",
+    "tier": 6,
+    "image": "Poues-Unatam_T_6.png",
+    "chests": "2x GOLD small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small"
+  },
+  {
+    "name": "Qiient-Al-Nusom",
+    "tier": 6,
+    "image": "Qiient-Al-Nusom_T_6.png",
+    "chests": "2x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x ORE small"
+  },
+  {
+    "name": "Qiitun-Duosum",
+    "tier": 6,
+    "image": "Qiitun-Duosum_T_6.png",
+    "chests": "2x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Sasos-Oiozlum",
+    "tier": 6,
+    "image": "Sasos-Oiozlum_T_6.png",
+    "chests": "3x GOLD small, 1x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x ORE small, 1x STONE small"
+  },
+  {
+    "name": "Xoritos-Aiairom",
+    "tier": 6,
+    "image": "Xoritos-Aiairom_T_6.png",
+    "chests": "2x GOLD small, 1x BLUE small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "1x ORE small"
+  },
+  {
+    "name": "Cilos-Avioaum",
+    "tier": 4,
+    "image": "Cilos-Avioaum_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x ORE small, 1x HIDE small, 2x STONE small"
+  },
+  {
+    "name": "Hasos-Ayousum",
+    "tier": 6,
+    "image": "Hasos-Ayousum_T_6.png",
+    "chests": "1x GOLD small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 2x COTTON small"
+  },
+  {
+    "name": "Pebos-Avosrom",
+    "tier": 6,
+    "image": "Pebos-Avosrom_T_6.png",
+    "chests": "3x GREEN small",
+    "dungeons": "4x DUNGEON_SOLO small",
+    "resources": "1x HIDE small, 2x COTTON small"
+  },
+  {
+    "name": "Tiros-Ouultum",
+    "tier": 6,
+    "image": "Tiros-Ouultum_T_6.png",
+    "chests": "1x GOLD small, 4x GREEN small",
+    "dungeons": "",
+    "resources": "2x HIDE small, 2x ORE small"
+  },
+  {
+    "name": "Ferites-Ohohtum",
+    "tier": 8,
+    "image": "Ferites-Ohohtum_T_8.png",
+    "chests": "6x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "2x STONE small"
+  },
+  {
+    "name": "Files-Izizaum",
+    "tier": 8,
+    "image": "Files-Izizaum_T_8.png",
+    "chests": "6x GREEN small",
+    "dungeons": "",
+    "resources": "2x WOOD small, 1x STONE small"
+  },
+  {
+    "name": "Oebitos-Eraerom",
+    "tier": 4,
+    "image": "Oebitos-Eraerom_T_4.png",
+    "chests": "4x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Cilos-Otatrom",
+    "tier": 8,
+    "image": "Cilos-Otatrom_T_8.png",
+    "chests": "2x GOLD small, 6x GREEN small",
+    "dungeons": "",
+    "resources": "2x WOOD small"
+  },
+  {
+    "name": "Foros-Uzazlum",
+    "tier": 8,
+    "image": "Foros-Uzazlum_T_8.png",
+    "chests": "6x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 1x COTTON small, 1x STONE small, 1x ORE small"
+  },
+  {
+    "name": "Fouos-Agosaum",
+    "tier": 6,
+    "image": "Fouos-Agosaum_T_6.png",
+    "chests": "1x BLUE small, 5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x STONE small, 1x ORE small"
+  },
+  {
+    "name": "Hiros-Exozlos",
+    "tier": 6,
+    "image": "Hiros-Exozlos_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "3x HIDE small"
+  },
+  {
+    "name": "Hynes-Ieatun",
+    "tier": 8,
+    "image": "Hynes-Ieatun_T_8.png",
+    "chests": "1x GOLD small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x HIDE small"
+  },
+  {
+    "name": "Oasitos-Aoeuam",
+    "tier": 4,
+    "image": "Oasitos-Aoeuam_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "1x ORE small, 1x WOOD small"
+  },
+  {
+    "name": "Oiritos-Eramtum",
+    "tier": 6,
+    "image": "Oiritos-Eramtum_T_6.png",
+    "chests": "2x GOLD small",
+    "dungeons": "",
+    "resources": "1x STONE small, 1x ORE small, 1x HIDE small, 2x WOOD small"
+  },
+  {
+    "name": "Petitos-Avosrom",
+    "tier": 6,
+    "image": "Petitos-Avosrom_T_6.png",
+    "chests": "3x GREEN small",
+    "dungeons": "4x DUNGEON_SOLO small",
+    "resources": "1x HIDE small, 1x WOOD small"
+  },
+  {
+    "name": "Tasitos-Ulaurom",
+    "tier": 6,
+    "image": "Tasitos-Ulaurom_T_6.png",
+    "chests": "8x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x ORE small, 1x COTTON small"
+  },
+  {
+    "name": "Tieos-Ayoslum",
+    "tier": 4,
+    "image": "Tieos-Ayoslum_T_4.png",
+    "chests": "1x BLUE small, 6x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small, 1x HIDE small"
+  },
+  {
+    "name": "Cilos-Ofailos",
+    "tier": 4,
+    "image": "Cilos-Ofailos_T_4.png",
+    "chests": "2x BLUE small, 3x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Cynos-Oxaeaum",
+    "tier": 4,
+    "image": "Cynos-Oxaeaum_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small, 1x HIDE small"
+  },
+  {
+    "name": "Honos-Oyezam",
+    "tier": 8,
+    "image": "Honos-Oyezam_T_8.png",
+    "chests": "1x GOLD small, 5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x HIDE small"
+  },
+  {
+    "name": "Hynites-Ogozlum",
+    "tier": 6,
+    "image": "Hynites-Ogozlum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x HIDE small, 1x ORE small, 1x COTTON small"
+  },
+  {
+    "name": "Ouyos-Aoeuam",
+    "tier": 4,
+    "image": "Ouyos-Aoeuam_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "1x ORE small, 1x WOOD small"
+  },
+  {
+    "name": "Qiitun-Et-Vietis",
+    "tier": 6,
+    "image": "Qiitun-Et-Vietis_T_6.png",
+    "chests": "1x BLUE small, 5x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small"
+  },
+  {
+    "name": "Sebos-Ugersum",
+    "tier": 6,
+    "image": "Sebos-Ugersum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "2x WOOD small"
+  },
+  {
+    "name": "Secent-Nutum",
+    "tier": 6,
+    "image": "Secent-Nutum_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x ORE small, 1x WOOD small"
+  },
+  {
+    "name": "Seritos-Egeylos",
+    "tier": 6,
+    "image": "Seritos-Egeylos_T_6.png",
+    "chests": "5x BLUE small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x ORE small, 1x COTTON small"
+  },
+  {
+    "name": "Settun-Odetum",
+    "tier": 6,
+    "image": "Settun-Odetum_T_6.png",
+    "chests": "5x BLUE small",
+    "dungeons": "",
+    "resources": "1x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Siros-Ofurlos",
+    "tier": 6,
+    "image": "Siros-Ofurlos_T_6.png",
+    "chests": "2x GOLD small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x COTTON small"
+  },
+  {
+    "name": "Soros-Axaesum",
+    "tier": 4,
+    "image": "Soros-Axaesum_T_4.png",
+    "chests": "1x BLUE small, 7x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small"
+  },
+  {
+    "name": "Tieitos-Ouultum",
+    "tier": 6,
+    "image": "Tieitos-Ouultum_T_6.png",
+    "chests": "1x GOLD small, 4x GREEN small",
+    "dungeons": "",
+    "resources": "2x HIDE small, 2x ORE small"
+  },
+  {
+    "name": "Touos-Uoemtum",
+    "tier": 4,
+    "image": "Touos-Uoemtum_T_4.png",
+    "chests": "1x BLUE small, 6x GREEN small",
+    "dungeons": "",
+    "resources": "1x ORE small, 1x WOOD small, 1x STONE small"
+  },
+  {
+    "name": "Firitos-Alodrom",
+    "tier": 4,
+    "image": "Firitos-Alodrom_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "3x COTTON small, 1x WOOD small"
+  },
+  {
+    "name": "Hasos-Agoitum",
+    "tier": 6,
+    "image": "Hasos-Agoitum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x STONE small, 1x COTTON small, 1x WOOD small"
+  },
+  {
+    "name": "Oynos-Oyozam",
+    "tier": 6,
+    "image": "Oynos-Oyozam_T_6.png",
+    "chests": "1x GOLD small, 1x BLUE small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "3x ORE small, 1x WOOD small"
+  },
+  {
+    "name": "Pynites-Ouozlum",
+    "tier": 4,
+    "image": "Pynites-Ouozlum_T_4.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 1x HIDE small, 1x STONE small"
+  },
+  {
+    "name": "Silitos-Abizaum",
+    "tier": 8,
+    "image": "Silitos-Abizaum_T_8.png",
+    "chests": "3x GOLD small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "1x ORE small, 1x HIDE small"
+  },
+  {
+    "name": "Touos-Ataglos",
+    "tier": 8,
+    "image": "Touos-Ataglos_T_8.png",
+    "chests": "1x BLUE small, 9x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x HIDE small"
+  },
+  {
+    "name": "Casitos-Atinaum",
+    "tier": 6,
+    "image": "Casitos-Atinaum_T_6.png",
+    "chests": "3x GOLD small, 1x BLUE small, 3x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Fouos-Amaurom",
+    "tier": 6,
+    "image": "Fouos-Amaurom_T_6.png",
+    "chests": "2x GOLD small, 1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 1x WOOD small"
+  },
+  {
+    "name": "Fuyitos-Ayiotum",
+    "tier": 6,
+    "image": "Fuyitos-Ayiotum_T_6.png",
+    "chests": "1x BLUE small, 3x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 1x STONE small, 1x WOOD small"
+  },
+  {
+    "name": "Hilitos-Osuorom",
+    "tier": 6,
+    "image": "Hilitos-Osuorom_T_6.png",
+    "chests": "2x GOLD small, 1x BLUE small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Secent-Vyntum",
+    "tier": 6,
+    "image": "Secent-Vyntum_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "2x WOOD small"
+  },
+  {
+    "name": "Seritos-Onaytum",
+    "tier": 6,
+    "image": "Seritos-Onaytum_T_6.png",
+    "chests": "1x GOLD small, 1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "2x COTTON small"
+  },
+  {
+    "name": "Tasos-Iriglos",
+    "tier": 6,
+    "image": "Tasos-Iriglos_T_6.png",
+    "chests": "2x GOLD small, 5x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small, 1x STONE small"
+  },
+  {
+    "name": "Casos-Ayosrom",
+    "tier": 6,
+    "image": "Casos-Ayosrom_T_6.png",
+    "chests": "6x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x WOOD small, 1x STONE small, 1x HIDE small"
+  },
+  {
+    "name": "Hiles-Izizaum",
+    "tier": 8,
+    "image": "Hiles-Izizaum_T_8.png",
+    "chests": "6x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x WOOD small, 1x STONE small"
+  },
+  {
+    "name": "Huyes-Ogozlum",
+    "tier": 6,
+    "image": "Huyes-Ogozlum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x HIDE small, 1x ORE small, 1x COTTON small"
+  },
+  {
+    "name": "Qiient-Qi-Odesas",
+    "tier": 6,
+    "image": "Qiient-Qi-Odesas_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 1x ORE small"
+  },
+  {
+    "name": "Qiient-Odesas",
+    "tier": 6,
+    "image": "Qiient-Odesas_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 1x ORE small"
+  },
+  {
+    "name": "Sebos-Avoirom",
+    "tier": 4,
+    "image": "Sebos-Avoirom_T_4.png",
+    "chests": "1x BLUE small, 8x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Sebos-Oyohun",
+    "tier": 8,
+    "image": "Sebos-Oyohun_T_8.png",
+    "chests": "1x GOLD small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x COTTON small, 1x STONE small"
+  },
+  {
+    "name": "Setent-Vietis",
+    "tier": 6,
+    "image": "Setent-Vietis_T_6.png",
+    "chests": "2x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small"
+  },
+  {
+    "name": "Casos-Uruxtum",
+    "tier": 4,
+    "image": "Casos-Uruxtum_T_4.png",
+    "chests": "1x BLUE small, 6x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small"
+  },
+  {
+    "name": "Fasites-Azazsum",
+    "tier": 8,
+    "image": "Fasites-Azazsum_T_8.png",
+    "chests": "7x GREEN small",
+    "dungeons": "",
+    "resources": "2x ORE small, 1x COTTON small"
+  },
+  {
+    "name": "Fieites-Unavtum",
+    "tier": 6,
+    "image": "Fieites-Unavtum_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "3x DUNGEON_SOLO small",
+    "resources": "2x ORE small"
+  },
+  {
+    "name": "Filos-Abalam",
+    "tier": 4,
+    "image": "Filos-Abalam_T_4.png",
+    "chests": "2x BLUE small, 3x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Fonitos-Amaurom",
+    "tier": 6,
+    "image": "Fonitos-Amaurom_T_6.png",
+    "chests": "1x GOLD small, 1x BLUE small, 1x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x HIDE small"
+  },
+  {
+    "name": "Oasos-Eraerom",
+    "tier": 4,
+    "image": "Oasos-Eraerom_T_4.png",
+    "chests": "4x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Oeritos-Ecunsum",
+    "tier": 4,
+    "image": "Oeritos-Ecunsum_T_4.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "3x ORE small, 1x WOOD small, 1x WOOD small, 1x COTTON small, 1x HIDE small"
+  },
+  {
+    "name": "Pirites-Unatam",
+    "tier": 6,
+    "image": "Pirites-Unatam_T_6.png",
+    "chests": "2x GOLD small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Pynos-Opabrom",
+    "tier": 6,
+    "image": "Pynos-Opabrom_T_6.png",
+    "chests": "2x GOLD small, 4x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Qiient-Al-Vynsis",
+    "tier": 6,
+    "image": "Qiient-Al-Vynsis_T_6.png",
+    "chests": "2x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Quaent-In-Odesum",
+    "tier": 6,
+    "image": "Quaent-In-Odesum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small, 1x COTTON small"
+  },
+  {
+    "name": "Sasos-Egeylos",
+    "tier": 6,
+    "image": "Sasos-Egeylos_T_6.png",
+    "chests": "6x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x ORE small, 1x COTTON small"
+  },
+  {
+    "name": "Tetitos-Ayoslum",
+    "tier": 4,
+    "image": "Tetitos-Ayoslum_T_4.png",
+    "chests": "1x BLUE small, 6x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 1x COTTON small"
+  },
+  {
+    "name": "Casos-Aximam",
+    "tier": 6,
+    "image": "Casos-Aximam_T_6.png",
+    "chests": "2x BLUE small, 2x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "2x ORE small"
+  },
+  {
+    "name": "Fynitos-Egoisum",
+    "tier": 6,
+    "image": "Fynitos-Egoisum_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "1x STONE small, 1x WOOD small"
+  },
+  {
+    "name": "Conitos-Oxaeaum",
+    "tier": 4,
+    "image": "Conitos-Oxaeaum_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small, 1x HIDE small"
+  },
+  {
+    "name": "Curos-Avulsum",
+    "tier": 6,
+    "image": "Curos-Avulsum_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x ORE small, 1x STONE small, 1x WOOD small"
+  },
+  {
+    "name": "Oeritos-Oyexlos",
+    "tier": 6,
+    "image": "Oeritos-Oyexlos_T_6.png",
+    "chests": "1x GOLD small, 4x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "2x WOOD small, 1x STONE small, 1x COTTON small"
+  },
+  {
+    "name": "Ooros-Ecunsum",
+    "tier": 4,
+    "image": "Ooros-Ecunsum_T_4.png",
+    "chests": "5x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 3x ORE small, 1x COTTON small, 1x HIDE small"
+  },
+  {
+    "name": "Puros-Amayam",
+    "tier": 4,
+    "image": "Puros-Amayam_T_4.png",
+    "chests": "1x BLUE small, 4x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Cieitos-Otatrom",
+    "tier": 8,
+    "image": "Cieitos-Otatrom_T_8.png",
+    "chests": "2x GOLD small, 6x GREEN small",
+    "dungeons": "",
+    "resources": "2x WOOD small"
+  },
+  {
+    "name": "Conitos-Ofailos",
+    "tier": 4,
+    "image": "Conitos-Ofailos_T_4.png",
+    "chests": "2x BLUE small, 3x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Couos-Opodam",
+    "tier": 6,
+    "image": "Couos-Opodam_T_6.png",
+    "chests": "3x GOLD small, 1x BLUE small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Firos-Aiavam",
+    "tier": 6,
+    "image": "Firos-Aiavam_T_6.png",
+    "chests": "2x GOLD small, 1x BLUE small, 3x GREEN small",
+    "dungeons": "",
+    "resources": "1x ORE small"
+  },
+  {
+    "name": "Hetitos-Iuaerom",
+    "tier": 6,
+    "image": "Hetitos-Iuaerom_T_6.png",
+    "chests": "6x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x HIDE small"
+  },
+  {
+    "name": "Quatun-Odetum",
+    "tier": 6,
+    "image": "Quatun-Odetum_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 1x WOOD small"
+  },
+  {
+    "name": "Settun-AL-Nusis",
+    "tier": 6,
+    "image": "Settun-AL-Nusis_T_6.png",
+    "chests": "1x BLUE small, 5x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small"
+  },
+  {
+    "name": "Xouitos-Aeoilos",
+    "tier": 4,
+    "image": "Xouitos-Aeoilos_T_4.png",
+    "chests": "3x BLUE small, 3x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Quaent-Tersis",
+    "tier": 6,
+    "image": "Quaent-Tersis_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x ORE small, 1x HIDE small"
+  },
+  {
+    "name": "Setent-Et-Nusum",
+    "tier": 6,
+    "image": "Setent-Et-Nusum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small, 1x COTTON small"
+  },
+  {
+    "name": "Ceros-Aeaylum",
+    "tier": 4,
+    "image": "Ceros-Aeaylum_T_4.png",
+    "chests": "1x BLUE small, 3x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small, 1x ORE small, 1x HIDE small"
+  },
+  {
+    "name": "Sectun-In-Odesis",
+    "tier": 6,
+    "image": "Sectun-In-Odesis_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small, 1x HIDE small"
+  },
+  {
+    "name": "Sectun-Qinsom",
+    "tier": 6,
+    "image": "Sectun-Qinsom_T_6.png",
+    "chests": "2x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small"
+  },
+  {
+    "name": "Setent-Qintis",
+    "tier": 6,
+    "image": "Setent-Qintis_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "2x WOOD small"
+  },
+  {
+    "name": "Settun-In-Odetum",
+    "tier": 6,
+    "image": "Settun-In-Odetum_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small, 1x COTTON small"
+  },
+  {
+    "name": "Silos-Apenlum",
+    "tier": 4,
+    "image": "Silos-Apenlum_T_4.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "2x WOOD small, 1x STONE small, 1x ORE small"
+  },
+  {
+    "name": "Tuyitos-Aboysum",
+    "tier": 8,
+    "image": "Tuyitos-Aboysum_T_8.png",
+    "chests": "2x GOLD small, 1x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x COTTON small, 1x ORE small"
+  },
+  {
+    "name": "Tiros-Odoxlum",
+    "tier": 6,
+    "image": "Tiros-Odoxlum_T_6.png",
+    "chests": "2x GOLD small, 1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "2x COTTON small, 1x WOOD small"
+  },
+  {
+    "name": "Fynites-Aeaosum",
+    "tier": 4,
+    "image": "Fynites-Aeaosum_T_4.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 1x ORE small"
+  },
+  {
+    "name": "Suyitos-Oyarlos",
+    "tier": 8,
+    "image": "Suyitos-Oyarlos_T_8.png",
+    "chests": "6x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x STONE small, 1x ORE small"
+  },
+  {
+    "name": "Quaent-Qintis",
+    "tier": 6,
+    "image": "Quaent-Qintis_T_6.png",
+    "chests": "1x BLUE small, 5x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small"
+  },
+  {
+    "name": "Qiient-Et-Qinsum",
+    "tier": 6,
+    "image": "Qiient-Et-Qinsum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "2x WOOD small"
+  },
+  {
+    "name": "Qiient-In-Viesis",
+    "tier": 6,
+    "image": "Qiient-In-Viesis_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "2x HIDE small"
+  },
+  {
+    "name": "Qiient-Qi-Nusom",
+    "tier": 6,
+    "image": "Qiient-Qi-Nusom_T_6.png",
+    "chests": "2x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x ORE small"
+  },
+  {
+    "name": "Qiient-Si-Tertum",
+    "tier": 6,
+    "image": "Qiient-Si-Tertum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 1x WOOD small"
+  },
+  {
+    "name": "Qiient-Et-Tertum",
+    "tier": 6,
+    "image": "Qiient-Et-Tertum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 1x WOOD small"
+  },
+  {
+    "name": "Qiitun-Vietis",
+    "tier": 6,
+    "image": "Qiitun-Vietis_T_6.png",
+    "chests": "1x BLUE small, 5x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small"
+  },
+  {
+    "name": "Quaent-In-Nusis",
+    "tier": 6,
+    "image": "Quaent-In-Nusis_T_6.png",
+    "chests": "1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small, 1x HIDE small"
+  },
+  {
+    "name": "Tebitos-Odoxlum",
+    "tier": 6,
+    "image": "Tebitos-Odoxlum_T_6.png",
+    "chests": "2x GOLD small, 1x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "2x COTTON small, 1x WOOD small"
+  },
+  {
+    "name": "Xynitos-Obursum",
+    "tier": 6,
+    "image": "Xynitos-Obursum_T_6.png",
+    "chests": "1x BLUE small, 5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x HIDE small, 1x ORE small"
+  },
+  {
+    "name": "Conitos-Uruxtum",
+    "tier": 4,
+    "image": "Conitos-Uruxtum_T_4.png",
+    "chests": "1x BLUE small, 6x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small"
+  },
+  {
+    "name": "Hasos-Inayaum",
+    "tier": 6,
+    "image": "Hasos-Inayaum_T_6.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Oieos-Umiutum",
+    "tier": 4,
+    "image": "Oieos-Umiutum_T_4.png",
+    "chests": "3x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x HIDE small, 1x STONE small, 1x ORE small"
+  },
+  {
+    "name": "Secent-al-tersum",
+    "tier": 6,
+    "image": "Secent-al-tersum_T_6.png",
+    "chests": "2x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small"
+  },
+  {
+    "name": "Setent-Al-Vietis",
+    "tier": 6,
+    "image": "Setent-Al-Vietis_T_6.png",
+    "chests": "2x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small"
+  },
+  {
+    "name": "Setent-Al-Vietis",
+    "tier": 6,
+    "image": "Setent-Al-Vietis_T_6.png",
+    "chests": "2x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small"
+  },
+  {
+    "name": "Soues-Uzurtum",
+    "tier": 6,
+    "image": "Soues-Uzurtum_T_6.png",
+    "chests": "3x GOLD small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x COTTON small, 1x ORE small"
+  },
+  {
+    "name": "Tuyitos-Auiusum",
+    "tier": 4,
+    "image": "Tuyitos-Auiusum_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "2x STONE small, 1x HIDE small"
+  },
+  {
+    "name": "Cebitos-Aeaylum",
+    "tier": 4,
+    "image": "Cebitos-Aeaylum_T_4.png",
+    "chests": "1x BLUE small, 3x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small, 1x ORE small, 1x HIDE small"
+  },
+  {
+    "name": "Cetos-Obaelos",
+    "tier": 4,
+    "image": "Cetos-Obaelos_T_4.png",
+    "chests": "2x BLUE small, 3x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Conitos-Uruxtum",
+    "tier": 4,
+    "image": "Conitos-Uruxtum_T_4.png",
+    "chests": "1x BLUE small, 6x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small"
+  },
+  {
+    "name": "Conitos-Uruxtum",
+    "tier": 4,
+    "image": "Conitos-Uruxtum_T_4.png",
+    "chests": "1x BLUE small, 6x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small"
+  },
+  {
+    "name": "Coros-Alieam",
+    "tier": 4,
+    "image": "Coros-Alieam_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 1x ORE small, 1x STONE small"
+  },
+  {
+    "name": "Coues-Exakrom",
+    "tier": 4,
+    "image": "Coues-Exakrom_T_4.png",
+    "chests": "1x BLUE small, 8x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Honites-Izizaum",
+    "tier": 8,
+    "image": "Honites-Izizaum_T_8.png",
+    "chests": "6x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "2x WOOD small, 1x STONE small"
+  },
+  {
+    "name": "Pouitos-Ofairom",
+    "tier": 6,
+    "image": "Pouitos-Ofairom_T_6.png",
+    "chests": "1x GOLD small, 5x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x ORE small"
+  },
+  {
+    "name": "Huyos-Uxeulum",
+    "tier": 4,
+    "image": "Huyos-Uxeulum_T_4.png",
+    "chests": "1x BLUE small, 8x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small"
+  },
+  {
+    "name": "Coritos-Avemlum",
+    "tier": 6,
+    "image": "Coritos-Avemlum_T_6.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "",
+    "resources": "1x STONE small, 1x WOOD small, 1x COTTON small"
+  },
+  {
+    "name": "Firos-Osinsum",
+    "tier": 6,
+    "image": "Firos-Osinsum_T_6.png",
+    "chests": "3x GOLD small, 1x BLUE small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x ORE small"
+  },
+  {
+    "name": "Qiient-Sa-Odetis",
+    "tier": 6,
+    "image": "Qiient-Sa-Odetis_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x HIDE small, 1x STONE small"
+  },
+  {
+    "name": "Secent-Viesum",
+    "tier": 6,
+    "image": "Secent-Viesum_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "2x HIDE small"
+  },
+  {
+    "name": "Settun-Tersom",
+    "tier": 6,
+    "image": "Settun-Tersom_T_6.png",
+    "chests": "2x BLUE small, 1x GREEN small",
+    "dungeons": "",
+    "resources": "1x ORE small"
+  },
+  {
+    "name": "Firos-Osinsum",
+    "tier": 6,
+    "image": "Firos-Osinsum_T_6.png",
+    "chests": "3x GOLD small, 1x BLUE small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x ORE small"
+  },
+  {
+    "name": "Oebitos-Oyozam",
+    "tier": 6,
+    "image": "Oebitos-Oyozam_T_6.png",
+    "chests": "1x GOLD small, 1x BLUE small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "3x ORE small"
+  },
+  {
+    "name": "Puros-Ofavam",
+    "tier": 6,
+    "image": "Puros-Ofavam_T_6.png",
+    "chests": "1x GOLD small, 3x GREEN small",
+    "dungeons": "4x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Qiient-Nutis",
+    "tier": 6,
+    "image": "Qiient-Nutis_T_6.png",
+    "chests": "5x GREEN small",
+    "dungeons": "",
+    "resources": "1x COTTON small, 1x WOOD small"
+  },
+  {
+    "name": "Setos-Avamsum",
+    "tier": 6,
+    "image": "Setos-Avamsum_T_6.png",
+    "chests": "6x GREEN small",
+    "dungeons": "",
+    "resources": "1x WOOD small, 1x HIDE small"
+  },
+  {
+    "name": "Sonitos-Ayailos",
+    "tier": 4,
+    "image": "Sonitos-Ayailos_T_4.png",
+    "chests": "1x BLUE small, 7x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": ""
+  },
+  {
+    "name": "Febites-Opavun",
+    "tier": 8,
+    "image": "Febites-Opavun_T_8.png",
+    "chests": "3x GOLD small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small"
+  },
+  {
+    "name": "Oasos-Uromlum",
+    "tier": 4,
+    "image": "Oasos-Uromlum_T_4.png",
+    "chests": "1x BLUE small, 2x GREEN small",
+    "dungeons": "1x DUNGEON_SOLO small",
+    "resources": "1x WOOD small, 1x HIDE small, 1x COTTON small"
+  },
+  {
+    "name": "Pasos-Avosam",
+    "tier": 4,
+    "image": "Pasos-Avosam_T_4.png",
+    "chests": "1x BLUE small, 3x GREEN small",
+    "dungeons": "2x DUNGEON_SOLO small",
+    "resources": ""
+  }
+]

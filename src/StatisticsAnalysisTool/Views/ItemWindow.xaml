@@ -31,11 +31,12 @@
                 <Label Content="{Binding TitleName, FallbackValue=TITLE__NAME}" HorizontalAlignment="Left" FontSize="14" Foreground="{StaticResource SolidColorBrush.Text.1}" FontWeight="Bold" />
                 <Label Content="{Binding ItemTierLevel, FallbackValue=T0.0}" HorizontalAlignment="Left" FontSize="14" Margin="-5 0 0 0" Foreground="{StaticResource SolidColorBrush.Text.1}" FontWeight="Bold" />
             </DockPanel>
-            <Grid ZIndex="1" Width="24" Height="24" Margin="0,0,5,5" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                <fa5:ImageAwesome Visibility="Visible" Icon="Solid_Sync" ToolTip="{Binding RefreshIconTooltipText, FallbackValue=LAST__UPDATE: TIME}" 
-                                  Spin="{Binding RefreshSpin, FallbackValue=false, UpdateSourceTrigger=PropertyChanged}" SpinDuration="10" 
-                                  Foreground="{StaticResource SolidColorBrush.Text.1}" MouseLeftButtonDown="RefreshSpin_MouseLeftButtonDown" />
-            </Grid>
+            <Border x:Name="RefreshButton" Panel.ZIndex="1" Margin="0,0,5,5" Padding="8,3" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                    Background="#FF2A2A2A" BorderBrush="#FF555555" BorderThickness="1" CornerRadius="3" Cursor="Hand"
+                    MouseLeftButtonDown="RefreshSpin_MouseLeftButtonDown"
+                    ToolTip="{Binding RefreshIconTooltipText, FallbackValue=LAST__UPDATE: TIME}">
+                <TextBlock x:Name="RefreshButtonText" Text="Guncelle" Foreground="{StaticResource SolidColorBrush.Text.1}" FontSize="11" />
+            </Border>
             <ProgressBar Margin="0,1,0,0" Height="1" Minimum="{Binding TaskProgressbarMinimum}" Maximum="{Binding TaskProgressbarMaximum}" 
                          Value="{Binding TaskProgressbarValue}" IsIndeterminate="{Binding IsTaskProgressbarIndeterminate}" VerticalAlignment="Top" />
         </Grid>
@@ -138,27 +139,6 @@
                     </StackPanel>
                     <wpf:CartesianChart Series="{Binding HistoryTabBindings.SeriesHistory}" XAxes="{Binding HistoryTabBindings.XAxesHistory}" 
                                         TooltipPosition="Center" FindingStrategy="ExactMatchTakeClosest" Margin="0,30,0,0" />
-                </Grid>
-            </TabItem>
-            <TabItem Header="{Binding Translation.RealMoneyPrice, FallbackValue=REAL_MONEY_PRICE}">
-                <Grid>
-                    <StackPanel Orientation="Horizontal">
-                        <ComboBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="2,0,5,0" Width="150" Height="26" ItemsSource="{Binding LocationFilters}" 
-                                  ItemTemplate="{StaticResource LocationFilterObjectTemplate}" />
-                    </StackPanel>
-                    <ListView ItemsSource="{Binding QualityTabBindings.Prices}" SnapsToDevicePixels="True" BorderThickness="0" SelectionMode="Single" 
-                              Foreground="{StaticResource SolidColorBrush.Text.1}" Margin="0,30,0,0">
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="{Binding Translation.City, FallbackValue=CITY}" CellTemplate="{StaticResource GridViewColumnCityTemplate}"/>
-                                <GridViewColumn Header="{Binding Translation.Normal, FallbackValue=NORMAL}" CellTemplate="{StaticResource GridViewColumn.SellPriceMinNormalRmTemplate}"/>
-                                <GridViewColumn Header="{Binding Translation.Good, FallbackValue=GOOD}" CellTemplate="{StaticResource GridViewColumn.SellPriceMinGoodRmTemplate}"/>
-                                <GridViewColumn Header="{Binding Translation.Outstanding, FallbackValue=OUTSTANDING}" CellTemplate="{StaticResource GridViewColumn.SellPriceMinOutstandingRmTemplate}"/>
-                                <GridViewColumn Header="{Binding Translation.Excellent, FallbackValue=EXCELLENT}" CellTemplate="{StaticResource GridViewColumn.SellPriceMinExcellentRmTemplate}"/>
-                                <GridViewColumn Header="{Binding Translation.Masterpiece, FallbackValue=MASTERPIECE}" CellTemplate="{StaticResource GridViewColumn.SellPriceMinMasterpieceRmTemplate}"/>
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
                 </Grid>
             </TabItem>
             <TabItem Header="{Binding Translation.Information, FallbackValue=INFORMATION}">

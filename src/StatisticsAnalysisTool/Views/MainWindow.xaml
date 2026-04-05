@@ -193,9 +193,9 @@
                     <userControls:DashboardControl DataContext="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext}" />
                 </Grid>
             </TabItem>
-            <TabItem Visibility="{Binding ItemSearchTabVisibility, Mode=OneWay}" Header="{Binding Translation.ItemSearch, FallbackValue=ITEM__SEARCH}">
+            <TabItem Visibility="{Binding ItemSearchTabVisibility, Mode=OneWay}" Header="AVALONROAD">
                 <Grid Style="{StaticResource TabItemGridStyle}">
-                    <userControls:ItemSearchControl DataContext="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext}" />
+                    <userControls:AvalonRoadControl />
                 </Grid>
             </TabItem>
             <TabItem Visibility="{Binding LoggingTabVisibility, Mode=OneWay}" Header="{Binding Translation.Logging, FallbackValue=LOGGING}">
@@ -257,6 +257,11 @@
             <TabItem Header="{Binding Translation.CraftingCalculator, FallbackValue='CRAFTING CALCULATOR'}">
                 <Grid Style="{StaticResource TabItemGridStyle}">
                     <userControls:CraftingCalculatorControl DataContext="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=DataContext}" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Builds">
+                <Grid Style="{StaticResource TabItemGridStyle}">
+                    <userControls:BuildsControl />
                 </Grid>
             </TabItem>
             <TabItem Header="Kelebek Tracker" Visibility="{Binding KelebekTrackerTabVisibility, Mode=OneWay}">

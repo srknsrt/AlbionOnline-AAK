@@ -130,15 +130,15 @@
                             Margin="0"
                             Background="{TemplateBinding Background}"
                             SnapsToDevicePixels="True">
-                        <ContentPresenter
-                                ContentTemplate="{TemplateBinding ContentTemplate}"
-                                Content="{TemplateBinding Content}"
-                                ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                        <TextBlock
+                                Text="{TemplateBinding Content}"
+                                FontFamily="Webdings"
+                                FontSize="20"
                                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                 Margin="{TemplateBinding Padding}"
-                                RecognizesAccessKey="True"
                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Foreground="{TemplateBinding Foreground}" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -46,8 +47,18 @@ public partial class KelebekTrackerControl : UserControl
         }
     }
 
-    private void StatsDurdur_Click(object sender, RoutedEventArgs e)
+    private async void StatsDurdur_Click(object sender, RoutedEventArgs e)
     {
+        if (_statsProcess != null && !_statsProcess.HasExited)
+        {
+            try
+            {
+                _statsProcess.StandardInput.WriteLine("FLUSH");
+                KonsolYaz("[Durdurulmadan once veritabanina aktariliyor...]\n");
+                await Task.Delay(3000);
+            }
+            catch { }
+        }
         ProcessDurdur(_statsProcess);
         _statsProcess = null;
         StatsStatusGuncelle(false);
@@ -103,8 +114,18 @@ public partial class KelebekTrackerControl : UserControl
         }
     }
 
-    private void MightDurdur_Click(object sender, RoutedEventArgs e)
+    private async void MightDurdur_Click(object sender, RoutedEventArgs e)
     {
+        if (_mightProcess != null && !_mightProcess.HasExited)
+        {
+            try
+            {
+                _mightProcess.StandardInput.WriteLine("FLUSH");
+                KonsolYaz("[Durdurulmadan once veritabanina aktariliyor...]\n");
+                await Task.Delay(3000);
+            }
+            catch { }
+        }
         ProcessDurdur(_mightProcess);
         _mightProcess = null;
         MightStatusGuncelle(false);

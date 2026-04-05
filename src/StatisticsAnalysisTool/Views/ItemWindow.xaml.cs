@@ -2,10 +2,12 @@
 using StatisticsAnalysisTool.Models;
 using StatisticsAnalysisTool.ViewModels;
 using System.ComponentModel;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace StatisticsAnalysisTool.Views;
 
@@ -101,10 +103,25 @@ public partial class ItemWindow
         MaximizedButton.Content = 1;
     }
 
-    private void RefreshSpin_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+    private async void RefreshSpin_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
     {
         var vm = (ItemWindowViewModel)DataContext;
-        vm?.AutoUpdateSwitcher();
+        if (vm == null) return;
+
+        RefreshButtonText.Text = "Guncelleniyor...";
+        RefreshButton.Background = new SolidColorBrush(Color.FromRgb(0x1A, 0x3A, 0x5A));
+
+        vm.AutoUpdateSwitcher();
+
+        await Task.Delay(3000);
+
+        RefreshButtonText.Text = "Guncellendi";
+        RefreshButton.Background = new SolidColorBrush(Color.FromRgb(0x1A, 0x4A, 0x1A));
+
+        await Task.Delay(2000);
+
+        RefreshButtonText.Text = "Guncelle";
+        RefreshButton.Background = new SolidColorBrush(Color.FromRgb(0x2A, 0x2A, 0x2A));
     }
 
     private void CraftingInfoPopup_MouseUp(object sender, MouseEventArgs e)
