@@ -104,6 +104,15 @@ Source: "{#PublishDir}\*.pdb";                   DestDir: "{app}"; Flags: ignore
 ; WebView2 native runtime
 Source: "{#PublishDir}\runtimes\*";              DestDir: "{app}\runtimes"; Flags: ignoreversion recursesubdirs createallsubdirs skipifsourcedoesntexist
 
+; Avalon Roads verileri (harita resimleri ve JSON)
+Source: "{#PublishDir}\Avalon\*";                DestDir: "{app}\Avalon"; Flags: ignoreversion recursesubdirs createallsubdirs skipifsourcedoesntexist
+
+; Oyun veri dosyalari
+Source: "{#PublishDir}\GameFiles\*";             DestDir: "{app}\GameFiles"; Flags: ignoreversion recursesubdirs createallsubdirs skipifsourcedoesntexist
+
+; Gorsel kaynaklar
+Source: "{#PublishDir}\ImageResources\*";        DestDir: "{app}\ImageResources"; Flags: ignoreversion recursesubdirs createallsubdirs skipifsourcedoesntexist
+
 ; Kelebek Tracker (lokal - GitHub'a dahil edilmez)
 Source: "{#PublishDir}\Trackers\*";              DestDir: "{app}\Trackers"; Flags: ignoreversion recursesubdirs createallsubdirs skipifsourcedoesntexist
 
