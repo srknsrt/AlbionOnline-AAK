@@ -83,8 +83,10 @@ public static class AutoUpdateController
                 Log.Information("Downloading update from: {url}", downloadUrl);
                 using var response = await HttpClient.GetAsync(downloadUrl);
                 response.EnsureSuccessStatusCode();
-                await using var fs = new FileStream(localFilePath, FileMode.Create);
-                await response.Content.CopyToAsync(fs);
+                await using (var fs = new FileStream(localFilePath, FileMode.Create))
+                {
+                    await response.Content.CopyToAsync(fs);
+                }
 
                 Log.Information("Update downloaded to: {path}", localFilePath);
 
