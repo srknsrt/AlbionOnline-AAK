@@ -30,6 +30,7 @@
                 <ResourceDictionary Source="Styles/PartyStyle.xaml" />
                 <ResourceDictionary Source="Styles/StorageHistoryStyle.xaml" />
                 <ResourceDictionary Source="Styles/DonationStyles.xaml" />
+                <ResourceDictionary Source="Styles/ThanksStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
             <FontFamily x:Key="AppFont">pack://application:,,,/Assets/Fonts/HisHeartIsMine.ttf#His Heart is Mine</FontFamily>

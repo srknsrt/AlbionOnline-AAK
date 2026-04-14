@@ -8,10 +8,10 @@ namespace StatisticsAnalysisTool.Models;
 
 public class CurrentMapInfoBinding : BaseViewModel
 {
-    private Visibility _currentMapInformationVisibility;
-    private string _displayedClusterName;
-    private string _tier;
+    private string _displayedClusterName = string.Empty;
     private ClusterMode _clusterMode;
+    private string _tier = string.Empty;
+    private Visibility _currentMapInformationVisibility;
 
     public ClusterInfo ClusterInfo { get; set; }
 

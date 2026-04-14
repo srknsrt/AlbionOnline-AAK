@@ -5,13 +5,13 @@ namespace StatisticsAnalysisTool.Models.BindingModel;
 
 public class UserTrackingBindings : BaseViewModel
 {
-    private string _username;
-    private string _guildName;
-    private string _allianceName;
+    private string _username = string.Empty;
+    private string _guildName = string.Empty;
+    private string _allianceName = string.Empty;
+    private CurrentMapInfoBinding _currentMapInfoBinding = new();
     private Visibility _usernameInformationVisibility;
     private Visibility _guildInformationVisibility;
     private Visibility _allianceInformationVisibility;
-    private CurrentMapInfoBinding _currentMapInfoBinding = new();
 
     public string Username
     {
