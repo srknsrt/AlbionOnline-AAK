@@ -160,13 +160,47 @@ public partial class KelebekTrackerControl : UserControl
 
     // ── Yardımcı Metodlar ────────────────────────────────────────
 
+    private static string BulPython()
+    {
+        var adaylar = new[]
+        {
+            "python",
+            @"C:\Users\" + Environment.UserName + @"\AppData\Local\Python\pythoncore-3.14-64\python.exe",
+            @"C:\Users\" + Environment.UserName + @"\AppData\Local\Python\pythoncore-3.13-64\python.exe",
+            @"C:\Users\" + Environment.UserName + @"\AppData\Local\Python\pythoncore-3.12-64\python.exe",
+            @"C:\Users\" + Environment.UserName + @"\AppData\Local\Python\bin\python.exe",
+            @"C:\Python313\python.exe",
+            @"C:\Python312\python.exe",
+            @"C:\Program Files\Python313\python.exe",
+            @"C:\Program Files\Python312\python.exe",
+        };
+        foreach (var aday in adaylar)
+        {
+            if (aday == "python") continue;
+            if (File.Exists(aday)) return aday;
+        }
+        // PATH'te ara
+        try
+        {
+            var p = Process.Start(new ProcessStartInfo("where.exe", "python")
+            {
+                UseShellExecute = false, RedirectStandardOutput = true, CreateNoWindow = true
+            });
+            var sonuc = p?.StandardOutput.ReadLine()?.Trim();
+            if (!string.IsNullOrEmpty(sonuc) && File.Exists(sonuc)) return sonuc;
+        }
+        catch { }
+        return "python";
+    }
+
     private Process ProcessBaslat(string dosya, string argümanlar, Action onCikis)
     {
         try
         {
+            var pythonYolu = BulPython();
             var psi = new ProcessStartInfo
             {
-                FileName = dosya,
+                FileName = pythonYolu,
                 Arguments = argümanlar,
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
