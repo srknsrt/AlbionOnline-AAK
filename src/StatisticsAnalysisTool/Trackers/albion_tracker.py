@@ -416,7 +416,6 @@ def photon_isle(ip_src, ip_dst, veri, sonuc_callback):
 
 SESSIZ_EVENTLER = {3}  # Arka plan gürültüsü (hareket vs.)
 _paket_sayac = 0
-GUILD_BYTES = GUILD_ADI.encode('utf-8')
 
 
 def _stats_dene(full_payload, parse_offset, callback, kaynak):
@@ -505,8 +504,9 @@ def _msg_isle(msg_type, payload, callback):
 # ============================================
 # STATS PARAMETRELERINI PARSE ET
 # ============================================
-GUILD_ADI = "At Arayan Kelebekler"
-GECERSIZ  = {"At Arayan Kelebekler", ""}
+GUILD_ADI   = "At Arayan Kelebekler"
+GUILD_BYTES = GUILD_ADI.encode('utf-8')
+GECERSIZ    = {"At Arayan Kelebekler", ""}
 
 # Param key'leri (Protocol 16 ile aynı)
 FAME_KEYS = {
