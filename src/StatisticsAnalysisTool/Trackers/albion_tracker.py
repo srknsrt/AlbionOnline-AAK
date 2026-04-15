@@ -413,20 +413,22 @@ def photon_isle(ip_src, ip_dst, veri, sonuc_callback):
 
 
 def _msg_isle(msg_type, payload, callback):
-    if msg_type != MSG_EVENT_DATA:
-        return
     if len(payload) < 1:
         return
 
     stream = P18Stream(payload)
     try:
-        event_code = stream.read_byte()
-        if event_code != EVENT_CHARACTER_STATS:
-            return
-        params = p18_read_param_table(stream)
-        callback(params)
-    except Exception:
-        pass
+        if msg_type == MSG_EVENT_DATA:
+            event_code = stream.read_byte()
+            print(f"[DEBUG] EventData code={event_code} (0x{event_code:02x}) payload={len(payload)}b")
+            if event_code == EVENT_CHARACTER_STATS:
+                params = p18_read_param_table(stream)
+                callback(params)
+        elif msg_type == MSG_OP_RESPONSE:
+            op_code = stream.read_byte()
+            print(f"[DEBUG] OpResponse code={op_code} (0x{op_code:02x}) payload={len(payload)}b")
+    except Exception as e:
+        print(f"[DEBUG] msg_isle hata: {e}")
 
 
 # ============================================
