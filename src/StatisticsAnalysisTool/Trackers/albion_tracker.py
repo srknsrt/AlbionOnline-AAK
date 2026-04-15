@@ -402,10 +402,8 @@ def photon_isle(ip_src, ip_dst, veri, sonuc_callback):
                 frag_offset  = struct.unpack('>i', veri[cmd_payload_start+16:cmd_payload_start+20])[0]
                 frag_data    = veri[cmd_payload_start+20:cmd_payload_end]
 
-                print(f"[DEBUG-FRAG] seq={start_seq} offset={frag_offset}/{total_length} fragData={len(frag_data)}b")
                 tam_veri = fragment_isle(ip_src, ip_dst, start_seq, total_length, frag_offset, frag_data)
                 if tam_veri:
-                    print(f"[DEBUG-FRAG] Birlestirildi! seq={start_seq} toplam={len(tam_veri)}b")
                     # Birleşmiş veri bir mesaj — skip 1 + messageType + payload
                     if len(tam_veri) >= 2:
                         msg_type = tam_veri[1]
@@ -418,18 +416,14 @@ SESSIZ_EVENTLER = {3}  # Arka plan gürültüsü (hareket vs.)
 _paket_sayac = 0
 
 
-def _stats_dene(full_payload, parse_offset, callback, kaynak):
+def _stats_dene(full_payload, parse_offset, callback):
     """
-    Protocol 18: Stats verisi OpResponse veya EventData olarak gelebilir,
-    op/event kodu artik ayirt edici degil — parametrelerdeki guild adina gore buluruz.
-    Farkli offset'lerle parse deneyip guild eslesirse callback'i cagirir.
+    Protocol 18: Stats verisi EventData code=1 olarak geliyor.
+    Guild adini parametrelerden bularak tespit eder.
     """
-    # Ham byte kontrolu — kesin kanit
-    if GUILD_BYTES in full_payload:
-        idx = full_payload.index(GUILD_BYTES)
-        print(f"  [RAW HIT] '{GUILD_ADI}' raw pakette bulundu offset={idx}/{len(full_payload)} ({kaynak})")
+    if GUILD_BYTES not in full_payload:
+        return
 
-    # Farkli offset'lerle parse dene (debug message null byte atlama icin)
     for extra in (0, 1, 2, 3):
         off = parse_offset + extra
         if off >= len(full_payload):
@@ -440,65 +434,28 @@ def _stats_dene(full_payload, parse_offset, callback, kaynak):
             isim  = params.get(0x01, "")
             guild = params.get(0x02, "")
             if isinstance(guild, str) and guild == GUILD_ADI and isinstance(isim, str) and isim:
-                print(f"[STATS BULUNDU] {kaynak} extra={extra} -> {isim} / {guild}")
                 callback(params)
                 return
-            # Farkli key kombinasyonlarini da dene
-            for k, v in params.items():
-                if isinstance(v, str) and v == GUILD_ADI:
-                    print(f"  [GUILD KEY FARKLI] {kaynak} extra={extra}: guild key=0x{k:02x}")
-                    for k2, v2 in params.items():
-                        if isinstance(v2, str) and v2 != GUILD_ADI and 2 <= len(v2) <= 20:
-                            print(f"  [ISIM ADAYI] key=0x{k2:02x} = {v2!r}")
-        except Exception:
-            pass
-
-    # Buyuk paket ama stats bulunamadi — ilk string parametreleri goster
-    if len(full_payload) > 200 and GUILD_BYTES not in full_payload:
-        stream = P18Stream(full_payload, offset=parse_offset)
-        try:
-            params = p18_read_param_table(stream)
-            str_params = [(f"0x{k:02x}", repr(v)[:30]) for k, v in params.items()
-                          if isinstance(v, str) and len(v) > 1][:5]
-            if str_params:
-                print(f"  [non-stats {kaynak}] paramSayisi={len(params)} strings={str_params}")
         except Exception:
             pass
 
 
 def _msg_isle(msg_type, payload, callback):
-    global _paket_sayac
     if len(payload) < 1:
         return
 
     try:
         if msg_type == MSG_EVENT_DATA:
-            event_code = payload[0]
-            if event_code not in SESSIZ_EVENTLER:
-                _paket_sayac += 1
-                print(f"[DEBUG] EventData code={event_code} payload={len(payload)}b #{_paket_sayac}")
-            # Protocol 18: event code artik 1, statsı parametrelerden bul
             if len(payload) > 20:
-                _stats_dene(payload, 1, callback, f"EventData code={event_code}")
+                _stats_dene(payload, 1, callback)
 
         elif msg_type == MSG_OP_RESPONSE:
-            _paket_sayac += 1
-            op_code = payload[0]
             ret_code = struct.unpack('<h', payload[1:3])[0] if len(payload) >= 3 else -1
-            print(f"[DEBUG] OpResponse op={op_code} retCode={ret_code} payload={len(payload)}b #{_paket_sayac}")
             if ret_code == 0 and len(payload) > 50:
-                # parse_offset=3: op_code(1) + retCode(2) atlandi
-                _stats_dene(payload, 3, callback, f"OpResponse op={op_code}")
+                _stats_dene(payload, 3, callback)
 
-        elif msg_type == MSG_OP_REQUEST:
-            # OpRequest'leri sadece buyuk olanlar icin logla
-            if len(payload) > 100:
-                print(f"[DEBUG] OpRequest op={payload[0]} payload={len(payload)}b")
-        else:
-            _paket_sayac += 1
-            print(f"[DEBUG] MsgType={msg_type} payload={len(payload)}b #{_paket_sayac}")
     except Exception as e:
-        print(f"[DEBUG] msg_isle hata: {e}")
+        print(f"[HATA] Paket isleme: {e}")
 
 
 # ============================================
