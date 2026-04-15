@@ -21,137 +21,461 @@ HEADERS = {
     "Content-Type": "application/json"
 }
 
+UPSERT_HEADERS = {**HEADERS, "Prefer": "resolution=merge-duplicates"}
+
 # ============================================
-# BELLEK BUFFER - Paketler burada birikir
+# BELLEK BUFFER
 # ============================================
 stats_buffer = []
 buffer_lock = threading.Lock()
 
 # ============================================
-# PHOTON FRAGMENT BİRLEŞTİRME
+# PROTOCOL 18 - TYPE KODLARI
 # ============================================
-fragment_buffer = defaultdict(dict)
-fragment_zaman = {}
+P18_BOOLEAN      = 2
+P18_BYTE         = 3
+P18_SHORT        = 4
+P18_FLOAT        = 5
+P18_DOUBLE       = 6
+P18_STRING       = 7
+P18_NULL         = 8
+P18_COMP_INT     = 9
+P18_COMP_LONG    = 10
+P18_INT1         = 11
+P18_INT1_NEG     = 12
+P18_INT2         = 13
+P18_INT2_NEG     = 14
+P18_LONG1        = 15
+P18_LONG1_NEG    = 16
+P18_LONG2        = 17
+P18_LONG2_NEG    = 18
+P18_CUSTOM       = 19
+P18_DICT         = 20
+P18_HASHTABLE    = 21
+P18_OBJ_ARRAY    = 23
+P18_OP_REQ       = 24
+P18_OP_RESP      = 25
+P18_EVENT_DATA   = 26
+P18_BOOL_FALSE   = 27
+P18_BOOL_TRUE    = 28
+P18_SHORT_ZERO   = 29
+P18_INT_ZERO     = 30
+P18_LONG_ZERO    = 31
+P18_FLOAT_ZERO   = 32
+P18_DOUBLE_ZERO  = 33
+P18_BYTE_ZERO    = 34
+P18_ARRAY        = 64
+P18_BOOL_ARRAY   = 66
+P18_BYTE_ARRAY   = 67
+P18_SHORT_ARRAY  = 68
+P18_FLOAT_ARRAY  = 69
+P18_DOUBLE_ARRAY = 70
+P18_STR_ARRAY    = 71
+P18_CINT_ARRAY   = 73
+P18_CLONG_ARRAY  = 74
+P18_CUSTOM_ARRAY = 83
+P18_DICT_ARRAY   = 84
+P18_HASH_ARRAY   = 85
+P18_SLIM_BASE    = 128
 
-def fragment_temizle():
-    simdi = datetime.now().timestamp()
-    eski = [k for k, t in fragment_zaman.items() if simdi - t > 30]
-    for k in eski:
-        fragment_buffer.pop(k, None)
-        fragment_zaman.pop(k, None)
+# Photon command types
+CMD_DISCONNECT     = 4
+CMD_SEND_RELIABLE  = 6
+CMD_SEND_UNRELI    = 7
+CMD_SEND_FRAGMENT  = 8
 
-def fragment_birlestir(ip_src, ip_dst, veri):
-    tum_paketler = []
+# Message types
+MSG_OP_REQUEST  = 2
+MSG_OP_RESPONSE = 3
+MSG_EVENT_DATA  = 4
+
+# CharacterStats event kodu
+EVENT_CHARACTER_STATS = 149
+
+# ============================================
+# PROTOCOL 18 STREAM OKUYUCU
+# ============================================
+class P18Stream:
+    def __init__(self, data, offset=0):
+        self.data = data
+        self.pos = offset
+
+    def has_more(self):
+        return self.pos < len(self.data)
+
+    def remaining(self):
+        return len(self.data) - self.pos
+
+    def read_byte(self):
+        if self.pos >= len(self.data):
+            raise EOFError("P18Stream bitti")
+        b = self.data[self.pos]
+        self.pos += 1
+        return b
+
+    def read_bytes(self, n):
+        if self.pos + n > len(self.data):
+            raise EOFError(f"P18Stream: {n} byte lazim, {self.remaining()} kaldi")
+        b = self.data[self.pos:self.pos + n]
+        self.pos += n
+        return b
+
+    def read_short(self):
+        b = self.read_bytes(2)
+        return struct.unpack('<H', b)[0]  # Little-endian (Protocol 18)
+
+    def read_float(self):
+        b = self.read_bytes(4)
+        return struct.unpack('<f', b)[0]
+
+    def read_double(self):
+        b = self.read_bytes(8)
+        return struct.unpack('<d', b)[0]
+
+    def read_comp_uint32(self):
+        value, shift = 0, 0
+        while shift < 35:
+            b = self.read_byte()
+            value |= (b & 0x7F) << shift
+            shift += 7
+            if (b & 0x80) == 0:
+                return value
+        return value
+
+    def read_comp_uint64(self):
+        value, shift = 0, 0
+        while shift < 70:
+            b = self.read_byte()
+            value |= (b & 0x7F) << shift
+            shift += 7
+            if (b & 0x80) == 0:
+                return value
+        return value
+
+    def read_comp_int32(self):
+        n = self.read_comp_uint32()
+        return (n >> 1) ^ -(n & 1)
+
+    def read_comp_int64(self):
+        n = self.read_comp_uint64()
+        return (n >> 1) ^ -(n & 1)
+
+    def read_string(self):
+        length = self.read_comp_uint32()
+        if length == 0:
+            return ""
+        return self.read_bytes(length).decode('utf-8', errors='ignore')
+
+    def skip(self, n):
+        self.pos = min(self.pos + n, len(self.data))
+
+def p18_deserialize(stream):
     try:
-        if len(veri) < 12:
-            return [veri]
-        offset = 12
-        command_count = veri[3]
-        for _ in range(command_count):
-            if offset >= len(veri): break
-            cmd_type = veri[offset]
-            if offset + 12 > len(veri): break
-            cmd_length = struct.unpack('>i', veri[offset+4:offset+8])[0]
-            if cmd_length <= 0 or cmd_length > 65535: break
-            if cmd_type == 8:
-                if offset + 28 > len(veri): break
-                start_seq  = struct.unpack('>i', veri[offset+12:offset+16])[0]
-                frag_count = struct.unpack('>i', veri[offset+16:offset+20])[0]
-                frag_no    = struct.unpack('>i', veri[offset+20:offset+24])[0]
-                payload    = veri[offset+28:offset+cmd_length]
-                key = (ip_src, ip_dst, start_seq)
-                fragment_buffer[key][frag_no] = payload
-                fragment_zaman[key] = datetime.now().timestamp()
-                if len(fragment_buffer[key]) == frag_count:
-                    tam_veri = b''.join(fragment_buffer[key].get(i, b'') for i in range(frag_count))
-                    del fragment_buffer[key]
-                    fragment_zaman.pop(key, None)
-                    tum_paketler.append(tam_veri)
-            elif cmd_type in (6, 7):
-                tum_paketler.append(veri[offset+12:offset+cmd_length])
-            offset += cmd_length
-    except Exception:
-        tum_paketler.append(veri)
-    if len(fragment_buffer) > 50:
-        fragment_temizle()
-    return tum_paketler if tum_paketler else [veri]
+        type_code = stream.read_byte()
+        return _p18_deserialize_typed(stream, type_code)
+    except EOFError:
+        return None
+
+def _p18_deserialize_typed(stream, type_code):
+    if type_code >= P18_SLIM_BASE:
+        # CustomTypeSlim
+        length = stream.read_comp_uint32()
+        stream.skip(length)
+        return None
+
+    if type_code == P18_NULL:       return None
+    if type_code == P18_BOOL_FALSE: return False
+    if type_code == P18_BOOL_TRUE:  return True
+    if type_code == P18_BOOLEAN:    return stream.read_byte() != 0
+    if type_code == P18_BYTE_ZERO:  return 0
+    if type_code == P18_BYTE:       return stream.read_byte()
+    if type_code == P18_SHORT_ZERO: return 0
+    if type_code == P18_SHORT:      return stream.read_short()
+    if type_code == P18_FLOAT_ZERO: return 0.0
+    if type_code == P18_FLOAT:      return stream.read_float()
+    if type_code == P18_DOUBLE_ZERO:return 0.0
+    if type_code == P18_DOUBLE:     return stream.read_double()
+    if type_code == P18_INT_ZERO:   return 0
+    if type_code == P18_LONG_ZERO:  return 0
+    if type_code == P18_INT1:       return stream.read_byte()
+    if type_code == P18_INT1_NEG:   return -stream.read_byte()
+    if type_code == P18_INT2:       return stream.read_short()
+    if type_code == P18_INT2_NEG:   return -stream.read_short()
+    if type_code == P18_LONG1:      return stream.read_byte()
+    if type_code == P18_LONG1_NEG:  return -stream.read_byte()
+    if type_code == P18_LONG2:      return stream.read_short()
+    if type_code == P18_LONG2_NEG:  return -stream.read_short()
+    if type_code == P18_COMP_INT:   return stream.read_comp_int32()
+    if type_code == P18_COMP_LONG:  return stream.read_comp_int64()
+    if type_code == P18_STRING:     return stream.read_string()
+
+    if type_code == P18_BYTE_ARRAY:
+        n = stream.read_comp_uint32()
+        stream.skip(n)
+        return None
+
+    if type_code == P18_SHORT_ARRAY:
+        n = stream.read_comp_uint32()
+        stream.skip(n * 2)
+        return None
+
+    if type_code == P18_FLOAT_ARRAY:
+        n = stream.read_comp_uint32()
+        stream.skip(n * 4)
+        return None
+
+    if type_code == P18_DOUBLE_ARRAY:
+        n = stream.read_comp_uint32()
+        stream.skip(n * 8)
+        return None
+
+    if type_code == P18_BOOL_ARRAY:
+        n = stream.read_comp_uint32()
+        stream.skip((n + 7) // 8)
+        return None
+
+    if type_code == P18_STR_ARRAY:
+        n = stream.read_comp_uint32()
+        for _ in range(n):
+            stream.read_string()
+        return None
+
+    if type_code == P18_CINT_ARRAY:
+        n = stream.read_comp_uint32()
+        for _ in range(n):
+            stream.read_comp_int32()
+        return None
+
+    if type_code == P18_CLONG_ARRAY:
+        n = stream.read_comp_uint32()
+        for _ in range(n):
+            stream.read_comp_int64()
+        return None
+
+    if type_code == P18_OBJ_ARRAY:
+        n = stream.read_comp_uint32()
+        for _ in range(n):
+            p18_deserialize(stream)
+        return None
+
+    if type_code == P18_ARRAY:
+        n = stream.read_comp_uint32()
+        inner_type = stream.read_byte()
+        for _ in range(n):
+            _p18_deserialize_typed(stream, inner_type)
+        return None
+
+    if type_code == P18_HASHTABLE:
+        n = stream.read_comp_uint32()
+        result = {}
+        for _ in range(n):
+            k = p18_deserialize(stream)
+            v = p18_deserialize(stream)
+            if k is not None:
+                result[k] = v
+        return result
+
+    if type_code == P18_DICT:
+        # key type + value type
+        key_type = stream.read_byte()
+        val_type = stream.read_byte()
+        n = stream.read_comp_uint32()
+        result = {}
+        for _ in range(n):
+            k_type = key_type if key_type != 0 else stream.read_byte()
+            k = _p18_deserialize_typed(stream, k_type)
+            v_type = val_type if val_type != 0 else stream.read_byte()
+            v = _p18_deserialize_typed(stream, v_type)
+            if k is not None:
+                result[k] = v
+        return result
+
+    if type_code == P18_CUSTOM:
+        stream.read_byte()  # custom type code
+        length = stream.read_comp_uint32()
+        stream.skip(length)
+        return None
+
+    if type_code in (P18_OP_REQ, P18_OP_RESP, P18_EVENT_DATA):
+        # Recursive structure
+        return None
+
+    # Unknown type — skip is unsafe, return None
+    return None
+
+
+def p18_read_param_table(stream):
+    params = {}
+    try:
+        count = stream.read_byte()
+        for _ in range(count):
+            key = stream.read_byte()
+            type_code = stream.read_byte()
+            value = _p18_deserialize_typed(stream, type_code)
+            params[key] = value
+    except EOFError:
+        pass
+    return params
+
 
 # ============================================
-# STATS PAKETİNİ PARSE ET
+# FRAGMENT BİRLEŞTİRME (Protocol 18)
 # ============================================
-FAME_PARAM_ALTERNATES = {
-    'total': [0x07, 0x06, 0x08],
-    'kill':  [0x0b, 0x0a, 0x0c],
-    'pve':   [0x0d, 0x0c, 0x0e],
-    'gather':[0x0e, 0x0f, 0x10],
-    'craft': [0x10, 0x11, 0x12],
+frag_buffers = {}   # key -> {'total': int, 'data': bytearray, 'received': int}
+
+def fragment_isle(ip_src, ip_dst, start_seq, total_length, frag_offset, payload):
+    key = (ip_src, ip_dst, start_seq)
+    if key not in frag_buffers:
+        frag_buffers[key] = {
+            'total': total_length,
+            'data': bytearray(total_length),
+            'received': 0,
+            'ts': datetime.now().timestamp()
+        }
+    buf = frag_buffers[key]
+    end = frag_offset + len(payload)
+    if end <= total_length:
+        buf['data'][frag_offset:end] = payload
+        buf['received'] += len(payload)
+
+    if buf['received'] >= total_length:
+        tam_veri = bytes(buf['data'])
+        del frag_buffers[key]
+        return tam_veri
+
+    # Temizlik: 30 sn'den eski fragmanları sil
+    simdi = datetime.now().timestamp()
+    eski = [k for k, v in frag_buffers.items() if simdi - v['ts'] > 30]
+    for k in eski:
+        del frag_buffers[k]
+
+    return None
+
+
+# ============================================
+# PHOTON PAKETİ İŞLE (Protocol 18)
+# ============================================
+def photon_isle(ip_src, ip_dst, veri, sonuc_callback):
+    if len(veri) < 12:
+        return
+
+    offset = 0
+    # PhotonHeader: peer_id(2) + flags(1) + commandCount(1) + timestamp(4) + challenge(4)
+    flags = veri[2]
+    command_count = veri[3]
+    offset = 12
+
+    # Encrypted paketleri atla
+    if flags == 1:
+        return
+
+    for _ in range(command_count):
+        if offset + 12 > len(veri):
+            break
+        cmd_type    = veri[offset]
+        cmd_length  = struct.unpack('>i', veri[offset+4:offset+8])[0]
+        cmd_payload_start = offset + 12
+        cmd_payload_end   = offset + cmd_length
+
+        if cmd_payload_end > len(veri) or cmd_length < 12:
+            break
+
+        if cmd_type == CMD_SEND_RELIABLE:
+            # [+12]: skip 1, [+13]: messageType, [+14+]: payload
+            if cmd_payload_start + 2 <= cmd_payload_end:
+                msg_type = veri[cmd_payload_start + 1]
+                payload = veri[cmd_payload_start + 2:cmd_payload_end]
+                _msg_isle(msg_type, payload, sonuc_callback)
+
+        elif cmd_type == CMD_SEND_UNRELI:
+            # [+12]: skip 4 (unreliable seq) + skip 1 + messageType + payload
+            if cmd_payload_start + 6 <= cmd_payload_end:
+                msg_type = veri[cmd_payload_start + 5]
+                payload = veri[cmd_payload_start + 6:cmd_payload_end]
+                _msg_isle(msg_type, payload, sonuc_callback)
+
+        elif cmd_type == CMD_SEND_FRAGMENT:
+            # [+12]: startSeq(4) + ?(4) + ?(4) + totalLength(4) + fragOffset(4) + data
+            if cmd_payload_start + 20 <= cmd_payload_end:
+                start_seq    = struct.unpack('>i', veri[cmd_payload_start+0:cmd_payload_start+4])[0]
+                total_length = struct.unpack('>i', veri[cmd_payload_start+12:cmd_payload_start+16])[0]
+                frag_offset  = struct.unpack('>i', veri[cmd_payload_start+16:cmd_payload_start+20])[0]
+                frag_data    = veri[cmd_payload_start+20:cmd_payload_end]
+
+                tam_veri = fragment_isle(ip_src, ip_dst, start_seq, total_length, frag_offset, frag_data)
+                if tam_veri:
+                    # Birleşmiş veri bir mesaj — skip 1 + messageType + payload
+                    if len(tam_veri) >= 2:
+                        msg_type = tam_veri[1]
+                        _msg_isle(msg_type, tam_veri[2:], sonuc_callback)
+
+        offset += cmd_length
+
+
+def _msg_isle(msg_type, payload, callback):
+    if msg_type != MSG_EVENT_DATA:
+        return
+    if len(payload) < 1:
+        return
+
+    stream = P18Stream(payload)
+    try:
+        event_code = stream.read_byte()
+        if event_code != EVENT_CHARACTER_STATS:
+            return
+        params = p18_read_param_table(stream)
+        callback(params)
+    except Exception:
+        pass
+
+
+# ============================================
+# STATS PARAMETRELERINI PARSE ET
+# ============================================
+GUILD_ADI = "At Arayan Kelebekler"
+GECERSIZ  = {"At Arayan Kelebekler", ""}
+
+# Param key'leri (Protocol 16 ile aynı)
+FAME_KEYS = {
+    'total':  [0x07, 0x06, 0x08],
+    'kill':   [0x0b, 0x0a, 0x0c],
+    'pve':    [0x0d, 0x0c, 0x0e],
+    'gather': [0x0e, 0x0f, 0x10],
+    'craft':  [0x10, 0x11, 0x12],
 }
 
-def fame_bul(fame_map, anahtar_listesi, bolme=10000):
-    for key in anahtar_listesi:
-        val = fame_map.get(key, 0)
-        if val > 0:
-            return val // bolme
+def long_deger(params, keyler):
+    for k in keyler:
+        v = params.get(k)
+        if isinstance(v, (int, float)) and v > 0:
+            return int(v) // 10000
     return 0
 
-def parse_stats_paketi(veri):
+def stats_isle(params):
     try:
-        idx = veri.find(b'\x01s\x00')
-        if idx == -1: return None
-        isim_uzunluk = veri[idx + 3]
-        isim = veri[idx + 4: idx + 4 + isim_uzunluk].decode('utf-8', errors='ignore')
+        isim  = params.get(0x01, "")
+        guild = params.get(0x02, "")
 
-        guild_idx = veri.find(b'\x02s\x00')
-        guild = ""
-        if guild_idx != -1:
-            guild_uzunluk = veri[guild_idx + 3]
-            guild = veri[guild_idx + 4: guild_idx + 4 + guild_uzunluk].decode('utf-8', errors='ignore')
+        if not isinstance(isim, str) or not isim or isim in GECERSIZ:
+            return
+        if len(isim) < 2 or (" " in isim and len(isim) > 15):
+            return
+        if guild != GUILD_ADI:
+            return
 
-        fame_map = {}
-        byte_map = {}
-        short_map = {}
-        int_map = {}
-        idx2 = 0
-        while idx2 < len(veri) - 10:
-            param_no = veri[idx2]
-            tip = veri[idx2 + 1]
-            if tip == 0x6c:
-                fame_map[param_no] = struct.unpack('>q', veri[idx2+2:idx2+10])[0]
-                idx2 += 10
-            elif tip == 0x69:
-                int_map[param_no] = struct.unpack('>i', veri[idx2+2:idx2+6])[0]
-                fame_map[param_no] = int_map[param_no]
-                idx2 += 6
-            elif tip == 0x6b:
-                short_map[param_no] = struct.unpack('>h', veri[idx2+2:idx2+4])[0]
-                idx2 += 4
-            elif tip == 0x62:
-                byte_map[param_no] = veri[idx2+2]
-                idx2 += 3
-            else:
-                idx2 += 1
+        total_fame  = long_deger(params, FAME_KEYS['total'])
+        kill_fame   = long_deger(params, FAME_KEYS['kill'])
+        pve_fame    = long_deger(params, FAME_KEYS['pve'])
+        gather_fame = long_deger(params, FAME_KEYS['gather'])
+        craft_fame  = long_deger(params, FAME_KEYS['craft'])
 
-        total_fame  = fame_bul(fame_map, FAME_PARAM_ALTERNATES['total'])
-        kill_fame   = fame_bul(fame_map, FAME_PARAM_ALTERNATES['kill'])
-        pve_fame    = fame_bul(fame_map, FAME_PARAM_ALTERNATES['pve'])
-        gather_fame = fame_bul(fame_map, FAME_PARAM_ALTERNATES['gather'])
-        craft_fame  = fame_bul(fame_map, FAME_PARAM_ALTERNATES['craft'])
-
-        # Fallback: total 0 ama alt kategoriler doluysa topla
         if total_fame == 0 and (kill_fame + pve_fame + gather_fame + craft_fame) > 0:
             total_fame = kill_fame + pve_fame + gather_fame + craft_fame
 
-        total_kills = short_map.get(0x0a, None)
-        if total_kills is None:
-            total_kills = byte_map.get(0x0a, 0)
+        kills_val = params.get(0x0a, 0)
+        total_kills = int(kills_val) if isinstance(kills_val, (int, float)) else 0
 
-        GECERSIZ = ["At Arayan Kelebekler", ""]
-        if not isim or len(isim) < 2 or isim in GECERSIZ:
-            return None
-        if " " in isim and len(isim) > 15:
-            return None
-
-        return {
+        sonuc = {
             "player_name": isim,
             "guild": guild,
             "total_fame": total_fame,
@@ -162,20 +486,24 @@ def parse_stats_paketi(veri):
             "total_kills": total_kills,
             "recorded_at": datetime.now().isoformat()
         }
+
+        with buffer_lock:
+            stats_buffer[:] = [s for s in stats_buffer if s['player_name'] != isim]
+            stats_buffer.append(sonuc)
+
+        print(f"\n{isim} | Guild: {guild}")
+        print(f"   Total: {total_fame:,} | Kill: {kill_fame:,} | PvE: {pve_fame:,}")
+        print(f"   Gather: {gather_fame:,} | Craft: {craft_fame:,} | Kills: {total_kills}")
+        with buffer_lock:
+            print(f"   Buffer: {len(stats_buffer)} oyuncu bekliyor")
+
     except Exception as e:
-        print(f"Parse hatasi: {e}")
-    return None
+        print(f"[Parse hatasi: {e}]")
+
 
 # ============================================
-# VERİTABANINA AKTAR (UPSERT)
+# VERİTABANINA AKTAR
 # ============================================
-UPSERT_HEADERS = {
-    "apikey": SUPABASE_KEY,
-    "Authorization": f"Bearer {SUPABASE_KEY}",
-    "Content-Type": "application/json",
-    "Prefer": "resolution=merge-duplicates"
-}
-
 def uye_guncelle(oyuncu_adi):
     url = f"{SUPABASE_URL}/rest/v1/guild_members"
     kontrol = requests.get(f"{url}?player_name=eq.{oyuncu_adi}", headers=HEADERS, timeout=10).json()
@@ -192,23 +520,16 @@ def player_stats_kaydet(veri):
     url = f"{SUPABASE_URL}/rest/v1/player_stats"
     player = veri['player_name']
     bugun = datetime.now().strftime('%Y-%m-%d')
-
-    # Bugunun kaydini kontrol et
     try:
         kontrol = requests.get(
             f"{url}?player_name=eq.{player}&recorded_at=gte.{bugun}T00:00:00&recorded_at=lt.{bugun}T23:59:59&limit=1",
             headers=HEADERS, timeout=10)
         if kontrol.status_code == 200 and kontrol.json():
             mevcut = kontrol.json()[0]
-            # Degisiklik var mi kontrol et
-            degisti = False
-            for alan in ['total_fame', 'kill_fame', 'pve_fame', 'gather_fame', 'craft_fame', 'total_kills']:
-                if mevcut.get(alan, 0) != veri.get(alan, 0):
-                    degisti = True
-                    break
+            degisti = any(mevcut.get(a, 0) != veri.get(a, 0)
+                         for a in ['total_fame','kill_fame','pve_fame','gather_fame','craft_fame','total_kills'])
             if not degisti:
                 return "skip"
-            # Bugunun kaydini guncelle
             kayit_id = mevcut.get('id')
             if kayit_id:
                 kayit = {k: v for k, v in veri.items() if k != 'guild'}
@@ -216,8 +537,6 @@ def player_stats_kaydet(veri):
                 return "update"
     except Exception:
         pass
-
-    # Bugun icin yeni kayit ekle
     kayit = {k: v for k, v in veri.items() if k != 'guild'}
     requests.post(url, headers=HEADERS, json=kayit, timeout=10)
     return "insert"
@@ -232,28 +551,26 @@ def veritabanina_aktar():
 
     print(f"\n{'='*50}")
     print(f"{len(kopya)} kayit veritabanina aktariliyor...")
-    eklenen = 0
-    guncellenen = 0
-    atlanan = 0
-    hatali = 0
+    eklenen = guncellenen = atlanan = hatali = 0
     for sonuc in kopya:
         try:
             uye_guncelle(sonuc['player_name'])
             islem = player_stats_kaydet(sonuc)
             if islem == "skip":
-                print(f"  - {sonuc['player_name']} | Total: {sonuc['total_fame']:,} (degisiklik yok)")
+                print(f"  - {sonuc['player_name']} | {sonuc['total_fame']:,} (degisiklik yok)")
                 atlanan += 1
             elif islem == "update":
-                print(f"  ~ {sonuc['player_name']} | Total: {sonuc['total_fame']:,} (guncellendi)")
+                print(f"  ~ {sonuc['player_name']} | {sonuc['total_fame']:,} (guncellendi)")
                 guncellenen += 1
             else:
-                print(f"  + {sonuc['player_name']} | Total: {sonuc['total_fame']:,} (yeni)")
+                print(f"  + {sonuc['player_name']} | {sonuc['total_fame']:,} (yeni)")
                 eklenen += 1
         except Exception as e:
             print(f"  X {sonuc['player_name']} hata: {e}")
             hatali += 1
-    print(f"Tamamlandi: {eklenen} yeni, {guncellenen} guncelleme, {atlanan} degisiklik yok, {hatali} hata")
+    print(f"Tamamlandi: {eklenen} yeni, {guncellenen} guncelleme, {atlanan} ayni, {hatali} hata")
     print(f"{'='*50}\n")
+
 
 # ============================================
 # STDIN DİNLE (FLUSH komutu için)
@@ -270,35 +587,23 @@ def stdin_dinle():
 stdin_thread = threading.Thread(target=stdin_dinle, daemon=True)
 stdin_thread.start()
 
+
 # ============================================
 # UDP PAKETLERİ DİNLE
 # ============================================
-GUILD_ADI = "At Arayan Kelebekler"
-
 def paketi_isle(paket):
     try:
         if not (paket.haslayer(UDP) and paket.haslayer(Raw) and paket.haslayer(IP)):
             return
-        veri = bytes(paket[Raw].load)
+        veri   = bytes(paket[Raw].load)
         ip_src = paket[IP].src
         ip_dst = paket[IP].dst
-        for islenmis_veri in fragment_birlestir(ip_src, ip_dst, veri):
-            if GUILD_ADI.encode() in islenmis_veri and len(islenmis_veri) > 150:
-                sonuc = parse_stats_paketi(islenmis_veri)
-                if sonuc:
-                    with buffer_lock:
-                        # Ayni oyuncunun eski kaydini guncelle
-                        stats_buffer[:] = [s for s in stats_buffer if s['player_name'] != sonuc['player_name']]
-                        stats_buffer.append(sonuc)
-                    print(f"\n{sonuc['player_name']} | Guild: {sonuc['guild']}")
-                    print(f"   Total: {sonuc['total_fame']:,} | Kill: {sonuc['kill_fame']:,} | PvE: {sonuc['pve_fame']:,}")
-                    print(f"   Gather: {sonuc['gather_fame']:,} | Craft: {sonuc['craft_fame']:,} | Kills: {sonuc['total_kills']}")
-                    with buffer_lock:
-                        print(f"   Buffer: {len(stats_buffer)} oyuncu bekliyor")
+        photon_isle(ip_src, ip_dst, veri, stats_isle)
     except Exception:
         pass
 
-print("Albion Stats Tracker baslatiliyor...")
+
+print("Albion Stats Tracker baslatiliyor... (Protocol 18)")
 print(f"Guild: {GUILD_ADI}")
 print("Mod: BUFFER (Veritabanina Aktar butonuna basana kadar bekler)")
 print("\nAlbion'da guild uyesine sag tikla -> Stats de!\n")
