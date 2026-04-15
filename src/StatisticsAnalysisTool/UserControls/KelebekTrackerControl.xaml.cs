@@ -35,7 +35,11 @@ public partial class KelebekTrackerControl : UserControl
             return;
         }
 
-        _statsProcess = ProcessBaslat("python", $"\"{script}\"", onCikis: () =>
+        var pythonYolu = BulPython();
+        KonsolYaz($"[Python yolu: {pythonYolu}]\n");
+        KonsolYaz($"[Script: {script}]\n");
+
+        _statsProcess = ProcessBaslat(pythonYolu, $"\"{script}\"", onCikis: () =>
         {
             Dispatcher.Invoke(() => StatsStatusGuncelle(false));
         });
@@ -102,7 +106,11 @@ public partial class KelebekTrackerControl : UserControl
             return;
         }
 
-        _mightProcess = ProcessBaslat("python", $"\"{script}\"", onCikis: () =>
+        var pythonYoluM = BulPython();
+        KonsolYaz($"[Python yolu: {pythonYoluM}]\n");
+        KonsolYaz($"[Script: {script}]\n");
+
+        _mightProcess = ProcessBaslat(pythonYoluM, $"\"{script}\"", onCikis: () =>
         {
             Dispatcher.Invoke(() => MightStatusGuncelle(false));
         });
@@ -197,10 +205,9 @@ public partial class KelebekTrackerControl : UserControl
     {
         try
         {
-            var pythonYolu = BulPython();
             var psi = new ProcessStartInfo
             {
-                FileName = pythonYolu,
+                FileName = dosya,
                 Arguments = argümanlar,
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
