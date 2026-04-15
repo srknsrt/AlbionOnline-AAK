@@ -402,8 +402,10 @@ def photon_isle(ip_src, ip_dst, veri, sonuc_callback):
                 frag_offset  = struct.unpack('>i', veri[cmd_payload_start+16:cmd_payload_start+20])[0]
                 frag_data    = veri[cmd_payload_start+20:cmd_payload_end]
 
+                print(f"[DEBUG-FRAG] seq={start_seq} offset={frag_offset}/{total_length} fragData={len(frag_data)}b")
                 tam_veri = fragment_isle(ip_src, ip_dst, start_seq, total_length, frag_offset, frag_data)
                 if tam_veri:
+                    print(f"[DEBUG-FRAG] Birlestirildi! seq={start_seq} toplam={len(tam_veri)}b")
                     # Birleşmiş veri bir mesaj — skip 1 + messageType + payload
                     if len(tam_veri) >= 2:
                         msg_type = tam_veri[1]
@@ -412,7 +414,11 @@ def photon_isle(ip_src, ip_dst, veri, sonuc_callback):
         offset += cmd_length
 
 
+SESSIZ_EVENTLER = {3}  # Arka plan gürültüsü (hareket vs.)
+_paket_sayac = 0
+
 def _msg_isle(msg_type, payload, callback):
+    global _paket_sayac
     if len(payload) < 1:
         return
 
@@ -420,13 +426,24 @@ def _msg_isle(msg_type, payload, callback):
     try:
         if msg_type == MSG_EVENT_DATA:
             event_code = stream.read_byte()
-            print(f"[DEBUG] EventData code={event_code} (0x{event_code:02x}) payload={len(payload)}b")
+            if event_code not in SESSIZ_EVENTLER:
+                _paket_sayac += 1
+                print(f"[DEBUG] EventData code={event_code} (0x{event_code:02x}) payload={len(payload)}b #{_paket_sayac}")
             if event_code == EVENT_CHARACTER_STATS:
                 params = p18_read_param_table(stream)
                 callback(params)
         elif msg_type == MSG_OP_RESPONSE:
+            _paket_sayac += 1
             op_code = stream.read_byte()
-            print(f"[DEBUG] OpResponse code={op_code} (0x{op_code:02x}) payload={len(payload)}b")
+            ret_code = struct.unpack('>h', payload[1:3])[0] if len(payload) >= 3 else -1
+            print(f"[DEBUG] OpResponse op={op_code} (0x{op_code:02x}) retCode={ret_code} payload={len(payload)}b #{_paket_sayac}")
+        elif msg_type == MSG_OP_REQUEST:
+            op_code = stream.read_byte()
+            # Sadece ilginc op kodlarini logla
+            print(f"[DEBUG] OpRequest op={op_code} (0x{op_code:02x}) payload={len(payload)}b")
+        else:
+            _paket_sayac += 1
+            print(f"[DEBUG] MsgType={msg_type} payload={len(payload)}b #{_paket_sayac}")
     except Exception as e:
         print(f"[DEBUG] msg_isle hata: {e}")
 
