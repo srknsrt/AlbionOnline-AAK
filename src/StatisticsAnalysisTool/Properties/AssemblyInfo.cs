@@ -12,7 +12,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("At Arayan Kelebekler")]
 [assembly: AssemblyProduct("AlbionOnlineAtArayanKelebeklerTools")]
-[assembly: AssemblyCopyright("Copyright ©  2025")]
+[assembly: AssemblyCopyright("Copyright ©  2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: SupportedOSPlatform("windows")]
@@ -53,7 +53,5 @@ using System.Runtime.CompilerServices;
 // Sie können alle Werte angeben oder Standardwerte für die Build- und Revisionsnummern verwenden,
 // indem Sie "*" wie unten gezeigt eingeben:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("26.4.15.5")]
-[assembly: AssemblyFileVersion("26.4.15.5")]
-
-
+[assembly: AssemblyVersion("26.4.17.1")]
+[assembly: AssemblyFileVersion("26.4.17.1")]

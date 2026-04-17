@@ -102,6 +102,7 @@ public class SettingsObject
     public bool IsLootedChestsStatsVisible { get; set; } = true;
     public bool IsReSpecStatsVisible { get; set; } = true;
     public bool IsRepairCostsStatsVisible { get; set; } = true;
+    public bool IsActivityChartVisible { get; set; } = true;
     public string ProxyUrlWithPort { get; set; }
     public string UpdateXmlUrl { get; set; } = "https://raw.githubusercontent.com/srknsrt/AlbionOnline-AAK/main/src/StatisticsAnalysisTool/ao-update-check.xml";
     public string DebugConsoleFilter { get; set; }
